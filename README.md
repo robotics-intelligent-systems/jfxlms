@@ -1,3 +1,3 @@
 # Learning Management System
 
-Canvas is a modern, open-source LMS. A Learning Management System (LMS) is a software application that facilitates the administration, documentation, tracking, reporting, and delivery of educational courses or training programs. It serves as a centralized hub where instructors and students can interact, access learning materials, and monitor progress
+Canvas is a modern, open-source LMS. Odoo eLearning is a comprehensive and user-friendly Learning Management System (LMS) designed to enhance the learning experience for both trainers and learners. It allows users to create, manage, and monetize courses while providing tools to assess progress and engage learners effectively.
