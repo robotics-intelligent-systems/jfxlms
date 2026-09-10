@@ -3,6 +3,20 @@
 > Open-source, modular learning, digital-engineering and health-sciences education platform for AI-assisted education, STEM, MBSE, simulation, professional training, Military Engineering, Naval Engineering, Nuclear Energy Systems, Artificial Intelligence, Aerospace Systems, Human Medicine, Stomatology, Biomedical Engineering, and Pediatric & Adolescent Gynecology.
 
 ---
+<p align="center">
+  <img
+    src="opentwin-platform-architecture.jpg"
+    alt="JFXLMS OpenTwin AI Learning Management, Engineering and Health Sciences Architecture"
+    width="100%"
+  />
+</p>
+
+<p align="center">
+  <em>
+    OpenTwin architecture for AI-assisted learning, engineering education,
+    health sciences, digital twins, MBSE, simulation and multidisciplinary research.
+  </em>
+</p>
 
 ## 1. Description and Context
 
