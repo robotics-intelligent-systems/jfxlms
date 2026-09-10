@@ -1,6 +1,6 @@
 <p align="center">
   <img
-    src="jfxlms-opentwin-platform-architecture.png"
+    src="jfxlms-opentwin-platform-architecture.jpg"
     alt="JFXLMS OpenTwin AI Learning Management, Engineering and Health Sciences Architecture"
     width="100%"
   />
