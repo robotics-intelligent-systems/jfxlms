@@ -2,10 +2,10 @@
 
 > Open-source, modular learning, digital-engineering and health-sciences education platform for AI-assisted education, STEM, MBSE, simulation, professional training, Military Engineering, Naval Engineering, Nuclear Energy Systems, Artificial Intelligence, Aerospace Systems, Human Medicine, Stomatology, Biomedical Engineering, and Pediatric & Adolescent Gynecology.
 
----
+
 <p align="center">
   <img
-    src="opentwin-platform-architecture.jpg"
+    src="jfxlms-opentwin-platform-architecture.png"
     alt="JFXLMS OpenTwin AI Learning Management, Engineering and Health Sciences Architecture"
     width="100%"
   />
@@ -18,11 +18,15 @@
   </em>
 </p>
 
+---
+
 ## 1. Description and Context
 
-**JFXLMS** is an open-source Learning Management System and digital education platform designed to integrate learning delivery, assessment, collaboration, AI tutoring, STEM tools, engineering simulation, and Model-Based Systems Engineering (MBSE).
+**JFXLMS** originates as an **AI-Powered Learning Management Platform** and open-source Learning Management System. The project brings together e-learning, collaboration, adaptive learning, programming education, mathematics, AI-assisted content creation, course interoperability, and engineering lifecycle concepts.
 
-The source project references an extensive open educational ecosystem including BigBlueButton, OpenTutor, PenEcho, SwallowCode, SwallowMath, Interactive OpenMP Programming, Frappe Learning, OpenCourseWare management, Presenton, Llemma, GeoGebra, React SCORM Provider, OpenOlat, eXeLearning, Adapt Framework, Forma LMS, CourseLit, OpenBoard, MathQuill, MathJax, Artemis, Liferay Portal, Sakai, Moodle-to-edX conversion tools, Canvas, Odoo eLearning, and OpenVidu.
+The source project references an extensive open educational ecosystem including **BigBlueButton, OpenTutor, PenEcho, SwallowCode, SwallowMath, Interactive OpenMP Programming, ocp-reveal, Frappe Learning, OpenCourseWare management, Presenton, Llemma, GeoGebra, React SCORM Provider, OpenOlat, eXeLearning, Adapt Framework, Forma LMS, CourseLit, OpenBoard, MathQuill, MathJax, Artemis, Liferay Portal, Sakai, Moodle-to-edX conversion tools, Canvas, Odoo eLearning, and OpenVidu**.
+
+This consolidated architecture preserves that original LMS and engineering-education foundation while extending it with AI tutoring, RAG, Learning Digital Twins, advanced engineering curricula, health-sciences education, multidisciplinary research laboratories, and professional simulation/training programs.
 
 The repository also defines an engineering lifecycle based on:
 
@@ -155,7 +159,614 @@ The program combines engineering fundamentals with infrastructure, geospatial sy
 
 ---
 
-## 6. Postgraduate Program — Advanced Strategic Multidomain Engineering
+## 6. Advanced Professional Training — Amphibious Aviation Special Operations
+
+JFXLMS can host an optional **Advanced Amphibious Aviation Special Operations Training Program** for qualified military, aviation, maritime, engineering, medical, communications, and rescue personnel.
+
+The curriculum borrows public, non-sensitive educational principles associated with demanding special-operations training models—such as the physical resilience and leadership culture commonly associated with Ranger training, water confidence and maritime endurance associated with SEAL training, and rescue/medical emphasis associated with Pararescue—while adapting them to a distinct mission profile:
+
+> **Air → Sea → Land → Rescue → Sustain → Integrate**
+
+The program is deliberately focused on **rescue, mobility, engineering, medical support, communications, geospatial awareness, unmanned systems, aviation safety, and humanitarian operations**. It does not provide weapons, assault, demolition, offensive infiltration, or attack instruction.
+
+### 6.1 Program Structure
+
+**Suggested duration:** 36–40 weeks, modular and simulation-supported.
+
+| Phase | Focus | Typical Duration |
+|---|---|---:|
+| 0 | Selection & Readiness Assessment | 2 weeks |
+| I | Special Operations Foundations | 4 weeks |
+| II | Aquatic & Amphibious Capability | 6 weeks |
+| III | Special Aviation Fundamentals | 6 weeks |
+| IV | Search, Rescue & Operational Medicine | 6 weeks |
+| V | Geospatial & Technical Reconnaissance | 3 weeks |
+| VI | Communications & Digital Systems | 3 weeks |
+| VII | Drones, Robotics & AI | 3 weeks |
+| VIII | Expeditionary Engineering | 2 weeks |
+| IX | OpenTwin Amphibious Operations Lab | 2 weeks |
+| X | Multidomain Final Exercise | 2 weeks |
+| XI | XR, Haptics & Human Augmentation | 4 weeks, integrated/recurrent |
+
+### 6.2 Selection & Readiness
+
+Assessment areas:
+
+- physical conditioning;
+- swimming proficiency;
+- water confidence;
+- mobility;
+- first aid;
+- orientation and navigation fundamentals;
+- teamwork;
+- leadership;
+- technical aptitude;
+- communication;
+- emotional stability;
+- decision-making under controlled stress.
+
+```text
+Physical Fitness
+      +
+Water Confidence
+      +
+Decision Making
+      +
+Teamwork
+      +
+Emotional Stability
+      +
+Technical Aptitude
+```
+
+### 6.3 Aquatic & Amphibious Capability
+
+Training areas:
+
+- advanced swimming;
+- water survival;
+- rescue swimming;
+- buoyancy and flotation;
+- maritime navigation fundamentals;
+- marine weather;
+- boat safety;
+- maritime communications;
+- aquatic first aid;
+- amphibious mobility;
+- familiarization with RHIBs, catamarans, USVs, ROVs, AUVs and amphibious vehicles.
+
+```text
+Aircraft
+   ↓
+Coastal Zone
+   ↓
+Surface Vessel
+   ↓
+Amphibious Vehicle
+   ↓
+Underwater Systems
+```
+
+### 6.4 Special Aviation Fundamentals
+
+Training areas:
+
+- aviation safety;
+- meteorology;
+- navigation;
+- communications;
+- human factors;
+- risk management;
+- air/sea coordination;
+- search operations;
+- evacuation support;
+- UAV/VTOL familiarization;
+- helicopter, STOL and seaplane operational awareness.
+
+The program separates pilot qualification from mission-specialist, rescue, engineering, communications, medical, and unmanned-systems roles.
+
+### 6.5 Search, Rescue & Operational Medicine
+
+Training emphasizes:
+
+- trauma first aid;
+- bleeding control;
+- hypothermia;
+- immobilization;
+- triage;
+- maritime rescue;
+- flood rescue;
+- mountain rescue;
+- aviation-incident response;
+- search coordination;
+- casualty stabilization;
+- evacuation support.
+
+```text
+Detection
+   ↓
+Localization
+   ↓
+Assessment
+   ↓
+Rescue
+   ↓
+Stabilization
+   ↓
+Evacuation
+   ↓
+Medical Facility
+```
+
+### 6.6 Geospatial, Communications and Digital Systems
+
+Core areas:
+
+- GIS / QGIS;
+- GNSS;
+- cartography;
+- photogrammetry;
+- satellite imagery;
+- UAV mapping;
+- terrain/coastal analysis;
+- radio fundamentals;
+- IP networking;
+- satellite communications;
+- mesh networking;
+- Linux;
+- IoT;
+- edge computing;
+- telemetry;
+- cybersecurity fundamentals;
+- redundant communications.
+
+### 6.7 Drones, Robotics and AI
+
+Educational platforms may include:
+
+- UAV;
+- USV;
+- UGV;
+- ROV;
+- AUV;
+- ROS 2;
+- computer vision;
+- edge AI;
+- supervised autonomy;
+- search-support analytics;
+- route optimization;
+- damage-assessment support.
+
+Critical decisions remain human-supervised.
+
+### 6.8 Expeditionary Engineering
+
+Training areas:
+
+- temporary power;
+- microgrids;
+- communications nodes;
+- water support;
+- mobile medical facilities;
+- temporary infrastructure;
+- engineering inspection;
+- logistics;
+- vehicle/equipment maintenance;
+- disaster-response infrastructure.
+
+```text
+Energy
+  ↓
+Microgrid
+  ↓
+Communications
+  ↓
+Water
+  ↓
+Medical
+  ↓
+Operations Center
+```
+
+### 6.9 OpenTwin Amphibious Operations Lab
+
+```text
+REAL WORLD
+Aircraft
+Vessel
+UAV
+Amphibious Vehicle
+Sensors
+Personnel
+      ↓
+Telemetry
+      ↓
+OPENTWIN
+      ↓
+Simulation
+AI
+GIS
+Weather
+Maintenance
+Logistics
+      ↓
+Training / Operations Dashboard
+```
+
+Possible technologies:
+
+- ROS 2
+- Gazebo
+- QGIS
+- OpenDroneMap
+- PX4
+- ArduPilot
+- OpenModelica
+- Python
+- PostgreSQL/PostGIS
+- Grafana
+- MQTT
+- Docker
+- Kubernetes
+
+### 6.10 Multidomain Final Exercise
+
+The culminating exercise can use a humanitarian scenario such as a severe coastal storm, flood, infrastructure outage, or aviation/maritime rescue event.
+
+Evaluation criteria:
+
+- safety;
+- leadership;
+- coordination;
+- rescue performance;
+- engineering judgment;
+- medical support;
+- communications;
+- logistics;
+- human-machine teaming;
+- mission completion.
+
+### 6.11 Professional Specializations
+
+After the common curriculum, JFXLMS can model specialty pathways such as:
+
+- Air Operations Specialist
+- Amphibious Operations Specialist
+- Rescue Swimmer
+- Operational Medic
+- UAV / Robotics Operator
+- Communications & Cyber Specialist
+- Geospatial Intelligence Specialist
+- Amphibious Vehicle Specialist
+- Engineering Specialist
+- OpenTwin / AI Systems Specialist
+- Human Augmentation & XR Systems Specialist
+
+---
+
+## 7. XR, Haptics & High-Mobility Exoskeleton Program
+
+The **OpenTwin XR & Human Augmentation Program** adds wearable robotics, augmented reality, haptic feedback, biomechanical sensing, simulation, and digital-twin technology to the professional training pathway.
+
+Its purpose is to improve **mobility assistance, endurance, rescue, load handling, maintenance, engineering work, situational awareness, and immersive training**. It is not designed around offensive weapon integration.
+
+### 7.1 Reference Architecture
+
+```text
+Operator
+   |
+   v
+Wearable Sensors
+   |
+   +------------------+
+   |                  |
+   v                  v
+Exoskeleton        AR Headset
+   |                  |
+Motion / Force     Maps / Alerts
+   |                  |
+   +--------+---------+
+            |
+            v
+      Haptic Interface
+            |
+            v
+       Edge Computer
+            |
+            v
+        OpenTwin
+            |
+   AI + Simulation + V&V
+```
+
+### 7.2 Human Factors & Biomechanics
+
+Curriculum:
+
+- biomechanics;
+- gait analysis;
+- ergonomics;
+- load distribution;
+- balance;
+- fatigue;
+- joint mobility;
+- injury prevention;
+- progressive adaptation;
+- emergency disengagement;
+- human-machine interaction.
+
+Design principle:
+
+> **The exoskeleton assists the operator; it must not remove human control or prevent rapid safe disengagement.**
+
+### 7.3 High-Mobility Exoskeleton
+
+Potential assistance areas:
+
+- hips;
+- knees;
+- ankles;
+- back;
+- shoulders;
+- arms.
+
+Priority should be given to:
+
+- low mass;
+- mobility;
+- environmental resistance;
+- graceful degradation;
+- maintainability;
+- safe passive behavior.
+
+Training modes:
+
+- Mobility Mode
+- Load Mode
+- Rescue Mode
+- Engineering Mode
+- Terrain Mode
+- Energy-Saving Mode
+
+### 7.4 Augmented Reality
+
+The AR interface can present only mission-relevant, safety-oriented information:
+
+- navigation;
+- maps;
+- team position;
+- weather;
+- terrain;
+- rescue grid;
+- vehicle/equipment status;
+- medical alerts;
+- energy status;
+- environmental hazards.
+
+```text
+AR Display
+   |
+   +-- Search Grid
+   +-- Last Known Position
+   +-- Drone Imagery
+   +-- Thermal Detections
+   +-- Evacuation Route
+   +-- Medical Facility
+```
+
+### 7.5 Haptic Interface
+
+Haptic cues can reduce visual/audio overload by communicating:
+
+- directional prompts;
+- navigation proximity;
+- environmental warnings;
+- system alerts;
+- training resistance;
+- posture or movement feedback.
+
+The exact cue vocabulary should be standardized, validated, and kept simple.
+
+### 7.6 Immersive Training
+
+```text
+Physical Operator
+       |
+Exoskeleton
+       |
+AR + Haptics
+       |
+Virtual Environment
+       |
+Physics Simulation
+       |
+Digital Twin
+```
+
+Training scenarios may include:
+
+- flood evacuation;
+- maritime rescue;
+- mountain rescue;
+- vessel-deck operations;
+- infrastructure inspection;
+- aircraft maintenance;
+- equipment transport;
+- robot coordination;
+- low-visibility operations.
+
+Simulated variables can include terrain resistance, slope, environmental conditions, visibility, virtual load, and fatigue models.
+
+### 7.7 Amphibious Exoskeleton Considerations
+
+At a high level, the training architecture should consider:
+
+- water and splash resistance;
+- corrosion resistance;
+- protected electronics;
+- sealed or protected joints;
+- redundant sensing;
+- quick release;
+- compatibility with rescue flotation systems;
+- safe passive mode;
+- controlled transition between land and shallow-water environments.
+
+Any design or training involving immersion must prioritize buoyancy, rapid disengagement, electrical safety, and supervised validation.
+
+### 7.8 Exoskeleton + UAV / Robotics
+
+```text
+UAV / Robot
+     |
+Sensors / Imaging
+     |
+Edge AI
+     |
+OpenTwin
+     |
+AR + Haptics
+     |
+Operator
+```
+
+The operator may receive:
+
+- live maps;
+- obstacle warnings;
+- inspection imagery;
+- search detections;
+- route guidance;
+- equipment status.
+
+### 7.9 Operator Digital Twin
+
+The **Operator Twin** may represent:
+
+- posture;
+- motion;
+- workload;
+- heart rate;
+- temperature;
+- estimated fatigue;
+- exoskeleton state;
+- battery state;
+- training performance history.
+
+```text
+Human
+ ↓
+Sensors
+ ↓
+Operator Twin
+ ↓
+AI Analysis
+ ↓
+Fatigue / Load Estimate
+ ↓
+Assistance Recommendation
+```
+
+Medical or safety-critical interpretations require qualified human oversight.
+
+### 7.10 Adaptive Assistance & Energy Management
+
+Assistance profiles may consider:
+
+```text
+Terrain
++
+Load
++
+Operator Movement
++
+Fatigue Estimate
++
+Available Energy
++
+Expected Duration
+```
+
+The system can recommend an assistance profile, while safety-critical limits remain fixed, validated, and human-supervised.
+
+Energy curriculum:
+
+- battery state;
+- interchangeable power modules;
+- consumption monitoring;
+- degraded modes;
+- thermal monitoring;
+- safe shutdown;
+- range/endurance estimation.
+
+### 7.11 Verification & Validation
+
+```text
+Simulation
+   ↓
+Bench Test
+   ↓
+Human Factors Test
+   ↓
+Controlled Walking
+   ↓
+Load Testing
+   ↓
+Terrain Testing
+   ↓
+Environmental Testing
+   ↓
+Supervised Field Training
+```
+
+Key safety functions should include:
+
+- emergency stop;
+- rapid mechanical release;
+- fall detection;
+- temperature monitoring;
+- electrical protection;
+- continuous diagnostics;
+- redundancy for critical sensing;
+- validated force/torque limits.
+
+### 7.12 OpenTwin XR & Human Augmentation Laboratory
+
+```text
+             OPENTWIN XR LAB
+                    |
+      +-------------+-------------+
+      |             |             |
+      v             v             v
+     AR            VR          Haptics
+      \             |            /
+       +------------+-----------+
+                    |
+               Exoskeleton
+                    |
+             Motion Tracking
+                    |
+              Digital Twin
+                    |
+        AI + Physics Simulation
+                    |
+             Training Analytics
+```
+
+Possible educational technology stack:
+
+- OpenXR
+- ROS 2
+- Gazebo
+- Godot or O3DE
+- OpenCV
+- Python / C++
+- MQTT
+- Grafana
+- physics simulation tools
+
+---
+
+## 8. Postgraduate Program — Advanced Strategic Multidomain Engineering
 
 ### Duration
 
@@ -174,7 +785,7 @@ Possible specializations:
 
 ---
 
-## 7. Semester 11 — Advanced Common Core
+## 9. Semester 11 — Advanced Common Core
 
 All postgraduate students complete:
 
@@ -212,7 +823,7 @@ Verification & Validation
 
 ---
 
-## 8. Postgraduate Track — Naval Systems Engineering
+## 10. Postgraduate Track — Naval Systems Engineering
 
 ### Focus
 
@@ -258,7 +869,7 @@ AI Navigation
 
 ---
 
-## 9. Postgraduate Track — Nuclear Energy Systems Engineering
+## 11. Postgraduate Track — Nuclear Energy Systems Engineering
 
 This specialization is restricted to **civilian nuclear-energy engineering, safety, instrumentation, simulation, and lifecycle management**.
 
@@ -304,7 +915,7 @@ The program does not include nuclear weapons design, construction, or optimizati
 
 ---
 
-## 10. Postgraduate Track — Artificial Intelligence & Autonomous Systems
+## 12. Postgraduate Track — Artificial Intelligence & Autonomous Systems
 
 ### Core Modules
 
@@ -391,7 +1002,7 @@ Verification
 
 ---
 
-## 11. Postgraduate Track — Aerospace Systems Engineering
+## 13. Postgraduate Track — Aerospace Systems Engineering
 
 ### Core Modules
 
@@ -458,7 +1069,7 @@ Flight Validation
 
 ---
 
-## 12. Semester 14 — Multidomain Integration
+## 14. Semester 14 — Multidomain Integration
 
 All tracks converge in a final engineering semester:
 
@@ -474,7 +1085,7 @@ All tracks converge in a final engineering semester:
 
 ---
 
-## 13. OpenTwin Multidomain Engineering Laboratory
+## 15. OpenTwin Multidomain Engineering Laboratory
 
 ```text
                 OPENTWIN LABORATORY
@@ -498,7 +1109,7 @@ The laboratory can host vessel digital twins, UAV/aircraft digital twins, energy
 
 ---
 
-## 14. JFXLMS Learning Architecture
+## 16. JFXLMS Learning Architecture
 
 ```text
 Learner
@@ -529,7 +1140,7 @@ Projects / Evidence / Portfolio
 
 ---
 
-## 15. Learning Digital Twins
+## 17. Learning Digital Twins
 
 JFXLMS can model learning and engineering progress through:
 
@@ -541,7 +1152,7 @@ JFXLMS can model learning and engineering progress through:
 
 ---
 
-## 16. AI Tutor and RAG
+## 18. AI Tutor and RAG
 
 The AI learning layer can support personalized tutoring, curriculum navigation, STEM explanation, document retrieval, laboratory guidance, assessment feedback, research assistance, engineering-document analysis, and requirements traceability.
 
@@ -566,7 +1177,7 @@ High-stakes engineering conclusions remain subject to instructor and qualified e
 
 ---
 
-## 17. Educational Technology Integration
+## 19. Educational Technology Integration
 
 ### Synchronous Learning
 - BigBlueButton
@@ -610,7 +1221,7 @@ High-stakes engineering conclusions remain subject to instructor and qualified e
 
 ---
 
-## 18. Assessment Model
+## 20. Assessment Model
 
 Recommended undergraduate weighting:
 
@@ -626,7 +1237,7 @@ Postgraduate assessment should emphasize simulation, research, systems engineeri
 
 ---
 
-## 19. Project-Based Learning
+## 21. Project-Based Learning
 
 Representative projects:
 
@@ -643,7 +1254,7 @@ Representative projects:
 
 ---
 
-## 20. Recommended Repository Structure
+## 22. Recommended Repository Structure
 
 ```text
 jfxlms/
@@ -660,14 +1271,23 @@ jfxlms/
 │   ├── naval/
 │   ├── nuclear-energy/
 │   ├── artificial-intelligence/
-│   └── aerospace/
+│   ├── aerospace/
+│   └── health-sciences/
+├── training/
+│   ├── amphibious-aviation-special-operations/
+│   ├── search-and-rescue/
+│   ├── geospatial/
+│   ├── unmanned-systems/
+│   └── xr-human-augmentation/
 ├── labs/
 │   ├── mbse/
 │   ├── digital-twin/
 │   ├── robotics/
 │   ├── energy/
 │   ├── naval/
-│   └── aerospace/
+│   ├── aerospace/
+│   ├── biomedical/
+│   └── xr-haptics-exoskeleton/
 ├── opentwin/
 │   ├── learner/
 │   ├── course/
@@ -688,7 +1308,7 @@ jfxlms/
 
 ---
 
-## 21. Development Roadmap
+## 23. Development Roadmap
 
 ### Phase 1 — Curriculum Model
 - Undergraduate curriculum schema
@@ -748,7 +1368,7 @@ jfxlms/
 ---
 
 
-## 22. Health Sciences & Biomedical Education Branch
+## 24. Health Sciences & Biomedical Education Branch
 
 JFXLMS can also support a parallel **Health Sciences and Biomedical Engineering academic branch**.
 
@@ -1097,7 +1717,7 @@ Human Medicine, Stomatology, and clinical specialties require institution-specif
 ---
 
 
-## 23. Safety, Ethics and Responsible Engineering
+## 25. Safety, Ethics and Responsible Engineering
 
 The program emphasizes public safety, engineering ethics, humanitarian applications, infrastructure resilience, environmental responsibility, cybersecurity, responsible AI, nuclear safety, verification and validation, and human oversight.
 
@@ -1107,7 +1727,7 @@ The nuclear specialization is restricted to civilian nuclear-energy systems, saf
 
 ---
 
-## 24. Strategic Vision
+## 26. Strategic Vision
 
 ```text
 EDUCATION
@@ -1143,7 +1763,7 @@ Guiding principle:
 
 ---
 
-## 25. Intellectual Property and Open Design
+## 27. Intellectual Property and Open Design
 
 The project should favor open educational resources, open standards, modular integrations, documented interfaces, independently replaceable software components, reproducible laboratories, portable course content, and open engineering formats where practical.
 
@@ -1151,7 +1771,7 @@ Open-source licensing does not itself guarantee freedom from third-party patent,
 
 ---
 
-## 26. Disclaimer
+## 28. Disclaimer
 
 JFXLMS and the curriculum described in this document are research, educational, and engineering concepts.
 
@@ -1161,7 +1781,7 @@ Real-world educational accreditation and engineering practice require compliance
 
 ---
 
-## 27. Conclusion
+## 29. Conclusion
 
 JFXLMS becomes more than a traditional LMS: it becomes an **AI-assisted digital engineering education platform**.
 
