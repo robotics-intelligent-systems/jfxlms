@@ -1,8 +1,3 @@
-# JFXLMS — OpenTwin AI Learning Management, Engineering & Health Sciences Education Platform
-
-> Open-source, modular learning, digital-engineering and health-sciences education platform for AI-assisted education, STEM, MBSE, simulation, professional training, Military Engineering, Naval Engineering, Nuclear Energy Systems, Artificial Intelligence, Aerospace Systems, Human Medicine, Stomatology, Biomedical Engineering, and Pediatric & Adolescent Gynecology.
-
-
 <p align="center">
   <img
     src="jfxlms-opentwin-platform-architecture.png"
@@ -17,6 +12,10 @@
     health sciences, digital twins, MBSE, simulation and multidisciplinary research.
   </em>
 </p>
+
+# OpenTwin AI Learning Management, Engineering & Health Sciences Education Platform
+
+> Open-source, modular learning, digital-engineering and health-sciences education platform for AI-assisted education, STEM, MBSE, simulation, professional training, Military Engineering, Naval Engineering, Nuclear Energy Systems, Artificial Intelligence, Aerospace Systems, Human Medicine, Stomatology, Biomedical Engineering, and Pediatric & Adolescent Gynecology.
 
 ---
 
