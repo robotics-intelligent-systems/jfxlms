@@ -1,7 +1,7 @@
 <p align="center">
   <img
     src="opentwin-platform-architecture.jpg"
-    alt="JFXLMS OpenTwin AI Learning Management, Engineering and Health Sciences Architecture"
+    alt="JFXLMS OpenTwin AI Learning Management, Engineering and Professional Certification Architecture"
     width="100%"
   />
 </p>
@@ -9,1796 +9,3181 @@
 <p align="center">
   <em>
     OpenTwin architecture for AI-assisted learning, engineering education,
-    health sciences, digital twins, MBSE, simulation and multidisciplinary research.
+    simulation, digital twins, Microsoft certification pathways,
+    LinkedIn Learning, NPTEL and professional skills development.
   </em>
 </p>
 
-# OpenTwin AI Learning Management, Engineering & Health Sciences Education Platform
+# Microsoft Certification, LinkedIn Learning & NPTEL Simulation Integration Architecture
 
-> Open-source, modular learning, digital-engineering and health-sciences education platform for AI-assisted education, STEM, MBSE, simulation, professional training, Military Engineering, Naval Engineering, Nuclear Energy Systems, Artificial Intelligence, Aerospace Systems, Human Medicine, Stomatology, Biomedical Engineering, and Pediatric & Adolescent Gynecology.
+## OpenTwin AI Learning Management, Engineering & Professional Certification Platform
+
+> **Repository:** `robotics-intelligent-systems/jfxlms`  
+> **Integration objective:** connect JFXLMS simulation laboratories and digital twins with current Microsoft certification pathways, LinkedIn Learning preparation content, and NPTEL/SWAYAM academic courses.
+>
+> **Core rule:** JFXLMS may prepare, simulate, assess, and recommend learning paths, but it must not represent a LinkedIn Learning certificate or an NPTEL certificate as a Microsoft Certification. Microsoft credentials remain governed by Microsoft Learn and the official exam/credential requirements.
 
 ---
 
-## 1. Description and Context
+# 1. Source Project Direction
 
-**JFXLMS** originates as an **AI-Powered Learning Management Platform** and open-source Learning Management System. The project brings together e-learning, collaboration, adaptive learning, programming education, mathematics, AI-assisted content creation, course interoperability, and engineering lifecycle concepts.
+JFXLMS is already positioned as an:
 
-The source project references an extensive open educational ecosystem including **BigBlueButton, OpenTutor, PenEcho, SwallowCode, SwallowMath, Interactive OpenMP Programming, ocp-reveal, Frappe Learning, OpenCourseWare management, Presenton, Llemma, GeoGebra, React SCORM Provider, OpenOlat, eXeLearning, Adapt Framework, Forma LMS, CourseLit, OpenBoard, MathQuill, MathJax, Artemis, Liferay Portal, Sakai, Moodle-to-edX conversion tools, Canvas, Odoo eLearning, and OpenVidu**.
+> **OpenTwin AI Learning Management, Engineering & Health Sciences Education Platform**
 
-This consolidated architecture preserves that original LMS and engineering-education foundation while extending it with AI tutoring, RAG, Learning Digital Twins, advanced engineering curricula, health-sciences education, multidisciplinary research laboratories, and professional simulation/training programs.
+The current repository combines:
 
-The repository also defines an engineering lifecycle based on:
+- LMS services;
+- AI-assisted learning;
+- RAG;
+- adaptive tutoring;
+- engineering laboratories;
+- digital twins;
+- MBSE;
+- CAD / CAM / CAS;
+- simulation;
+- professional training;
+- STEM;
+- cloud/edge;
+- robotics;
+- aerospace;
+- engineering research;
+- professional certification.
+
+Its current learning architecture is approximately:
 
 ```text
-MBSE
-├── CAD
-├── CAM
-└── CAS
+Learners
+   ↓
+JFXLMS Portal
+Courses | Labs | Exams | Projects | Collaboration
+   ↓
+AI Learning Layer
+Tutor | RAG | Feedback | Assessment | Recommendations
+   ↓
+LMS Services + Engineering Lab
+   ↓
+Advanced Engineering Programs
 ```
 
-with Arcadia / Capella as an engineering architecture reference.
-
-This consolidated version extends JFXLMS with a complete **Military Engineering and Advanced Strategic Engineering curriculum**, focused on infrastructure, mobility, energy, communications, AI, simulation, digital twins, autonomous systems, disaster response, naval systems, civilian nuclear-energy engineering, and aerospace systems.
-
-The program is educational and engineering-oriented and does not include weapons-development instruction.
+The proposed extension adds a **Professional Certification & Skills Validation Plane**.
 
 ---
 
-## 2. Vision
-
-JFXLMS evolves from a conventional LMS into an **AI-powered engineering learning environment** where academic content, laboratories, simulation models, digital twins, engineering artifacts, assessments, and research projects coexist in one platform.
+# 2. Target Architecture
 
 ```text
-                         LEARNERS
-                            |
-                            v
-+-------------------------------------------------------+
-|                    JFXLMS PORTAL                      |
-| Courses | Labs | Exams | Projects | Collaboration    |
-+---------------------------+---------------------------+
-                            |
-                            v
-+-------------------------------------------------------+
-|                 AI LEARNING LAYER                     |
-| Tutor | RAG | Feedback | Assessment | Recommendations|
-+---------------------------+---------------------------+
-                            |
-             +--------------+--------------+
-             |                             |
-             v                             v
-+--------------------------+    +-------------------------+
-| LMS / EDUCATION SERVICES |    | ENGINEERING LAB        |
-| SCORM / LTI / xAPI       |    | MBSE / CAD / CAM / CAS|
-| Video / Whiteboard       |    | Simulation / Digital   |
-| Assignments / Analytics  |    | Twin / HPC / Robotics  |
-+--------------------------+    +-------------------------+
-             |                             |
-             +--------------+--------------+
-                            |
-                            v
-+-------------------------------------------------------+
-|           ADVANCED ENGINEERING PROGRAMS               |
-| Military | Naval | Nuclear | AI | Aerospace           |
-+-------------------------------------------------------+
-```
-
----
-
-## 3. Educational Mission
-
-The platform should support undergraduate engineering education, postgraduate specialization, adaptive AI tutoring, engineering laboratories, virtual and remote laboratories, STEM education, programming and numerical computing, professional certification, simulation-driven learning, project-based learning, digital-twin-based education, multidisciplinary systems engineering, and research.
-
----
-
-## 4. Academic Program Architecture
-
-The proposed learning pathway combines a **five-year Military Engineering program** with a **two-year postgraduate specialization cycle**.
-
-```text
-Years 1–5
-Military Engineering
-        |
-        v
-Core Engineering Degree
-        |
-        v
-Years 6–7
-Advanced Engineering Postgraduate Program
-        |
-        +------------------+------------------+------------------+
-        |                  |                  |                  |
-        v                  v                  v                  v
-      Naval             Nuclear              AI             Aerospace
-   Engineering        Energy Systems     & Autonomous      Engineering
-                                           Systems
-        |                  |                  |                  |
-        +------------------+------------------+------------------+
-                            |
-                            v
-                 Multidomain Capstone
-                            |
-                            v
-                   OpenTwin Laboratory
+┌──────────────────────────────────────────────────────────────┐
+│                         JFXLMS                               │
+│ Courses | Labs | Simulators | Projects | Assessments        │
+└─────────────────────────────┬────────────────────────────────┘
+                              │
+                              ▼
+┌──────────────────────────────────────────────────────────────┐
+│                  SKILL GRAPH / COMPETENCY MAP                │
+│ Skills | Evidence | Prerequisites | Gaps | Readiness        │
+└─────────────────────────────┬────────────────────────────────┘
+                              │
+             ┌────────────────┼─────────────────┐
+             ▼                ▼                 ▼
+      MICROSOFT LEARN   LINKEDIN LEARNING     NPTEL
+      Credentials       Cert Prep / Paths     SWAYAM Courses
+             │                │                 │
+             └────────────────┼─────────────────┘
+                              ▼
+                    LEARNING PATH ENGINE
+                              │
+                              ▼
+                    SIMULATION LAB ENGINE
+                              │
+                              ▼
+                     READINESS ASSESSMENT
+                              │
+                              ▼
+                   MICROSOFT CREDENTIAL
+                       OFFICIAL EXAM
 ```
 
 ---
 
-## 5. Undergraduate Program — Military Engineering
+# 3. Three Different Credential Layers
 
-### Duration
+The architecture must distinguish:
 
-**5 years / 10 semesters**
+```text
+LINKEDIN LEARNING
+Course / Learning Path / Professional Certificate
+          ≠
+MICROSOFT CERTIFICATION
 
-### Orientation
+NPTEL / SWAYAM
+Course Certificate
+          ≠
+MICROSOFT CERTIFICATION
+```
 
-**Military Engineering — Systems, Infrastructure, Mobility and Digital Engineering**
+Recommended interpretation:
 
-The program combines engineering fundamentals with infrastructure, geospatial systems, communications, logistics, cybersecurity, AI, digital twins, robotics, emergency engineering, and leadership.
+```text
+LinkedIn Learning
+→ guided professional preparation
 
-| Semester | Academic Focus | Applied Training |
-|---|---|---|
-| 1 | Calculus I, Linear Algebra, Physics I, Introduction to Military Engineering, CAD, Programming I, Engineering Ethics | Physical conditioning, orientation, first aid, teamwork |
-| 2 | Calculus II, Physics II, Chemistry, Programming II, Mechanics, Surveying I, Technical Communication | Land navigation, field teamwork, safety |
-| 3 | Calculus III, Differential Equations, Statics, Materials, Surveying II, Databases, GIS I | Topographic survey, terrain evaluation, field data |
-| 4 | Dynamics, Strength of Materials, Thermodynamics, Circuits, GIS II, Networks, Statistics | Field communications, engineering logistics |
-| 5 | Fluid Mechanics, Geotechnics, Structural Analysis I, Hydrology, Embedded Systems, Linux, Operations Research | Temporary infrastructure, route assessment, disaster response |
-| 6 | Concrete/Steel, Structural Analysis II, Transportation, Environmental Engineering, IoT, Cybersecurity, Project Management | Infrastructure resilience, emergency communications |
-| 7 | Bridges, Water Resources, Energy/Microgrids, Sensors/Robotics, Distributed Systems, MBSE/SysML, Applied AI | UAV mapping, infrastructure inspection |
-| 8 | Critical Infrastructure, Modular Construction, Coastal Engineering, Digital Twins, Cloud/Edge, Security, Risk | Disaster simulation, damage assessment |
-| 9 | Systems-of-Systems, Advanced Logistics, C4ISR Architecture Fundamentals, Geospatial Intelligence, AI Decision Support, Humanitarian Law | Technical command-post simulation, humanitarian assistance |
-| 10 | Capstone, Verification & Validation, Lifecycle Engineering, Defense Economics/Technology Policy, Leadership, Innovation | Integrated engineering exercise and project defense |
+NPTEL
+→ academic/theoretical reinforcement
 
-### Undergraduate concentration options
+JFXLMS Simulators
+→ practical skill evidence
 
-- Infrastructure and Construction Engineering
-- Geospatial and Technical Reconnaissance
-- Communications and Cyber Systems
-- Robotics, AI and Autonomous Systems
-- Logistics, Emergency and Mobility Engineering
+Microsoft Learn
+→ authoritative certification objectives
+
+Microsoft Exam
+→ official credential decision
+```
 
 ---
 
-## 6. Advanced Professional Training — Amphibious Aviation Special Operations
+# 4. Current Microsoft Certification Registry
 
-JFXLMS can host an optional **Advanced Amphibious Aviation Special Operations Training Program** for qualified military, aviation, maritime, engineering, medical, communications, and rescue personnel.
+JFXLMS should maintain a **dynamic credential registry** rather than hard-code certification names permanently.
 
-The curriculum borrows public, non-sensitive educational principles associated with demanding special-operations training models—such as the physical resilience and leadership culture commonly associated with Ranger training, water confidence and maritime endurance associated with SEAL training, and rescue/medical emphasis associated with Pararescue—while adapting them to a distinct mission profile:
-
-> **Air → Sea → Land → Rescue → Sustain → Integrate**
-
-The program is deliberately focused on **rescue, mobility, engineering, medical support, communications, geospatial awareness, unmanned systems, aviation safety, and humanitarian operations**. It does not provide weapons, assault, demolition, offensive infiltration, or attack instruction.
-
-### 6.1 Program Structure
-
-**Suggested duration:** 36–40 weeks, modular and simulation-supported.
-
-| Phase | Focus | Typical Duration |
-|---|---|---:|
-| 0 | Selection & Readiness Assessment | 2 weeks |
-| I | Special Operations Foundations | 4 weeks |
-| II | Aquatic & Amphibious Capability | 6 weeks |
-| III | Special Aviation Fundamentals | 6 weeks |
-| IV | Search, Rescue & Operational Medicine | 6 weeks |
-| V | Geospatial & Technical Reconnaissance | 3 weeks |
-| VI | Communications & Digital Systems | 3 weeks |
-| VII | Drones, Robotics & AI | 3 weeks |
-| VIII | Expeditionary Engineering | 2 weeks |
-| IX | OpenTwin Amphibious Operations Lab | 2 weeks |
-| X | Multidomain Final Exercise | 2 weeks |
-| XI | XR, Haptics & Human Augmentation | 4 weeks, integrated/recurrent |
-
-### 6.2 Selection & Readiness
-
-Assessment areas:
-
-- physical conditioning;
-- swimming proficiency;
-- water confidence;
-- mobility;
-- first aid;
-- orientation and navigation fundamentals;
-- teamwork;
-- leadership;
-- technical aptitude;
-- communication;
-- emotional stability;
-- decision-making under controlled stress.
+Recommended active routes relevant to this architecture as of September 2026:
 
 ```text
-Physical Fitness
-      +
-Water Confidence
-      +
-Decision Making
-      +
-Teamwork
-      +
-Emotional Stability
-      +
-Technical Aptitude
+AI-901
+Microsoft Certified: Azure AI Fundamentals
+
+AI-103
+Microsoft Certified:
+Azure AI Apps and Agents Developer Associate
+
+AB-620
+Microsoft Certified:
+AI Agent Builder Associate
+
+AZ-104
+Microsoft Certified:
+Azure Administrator Associate
+
+AZ-305
+Microsoft Certified:
+Azure Solutions Architect Expert
+(with Microsoft prerequisite requirement)
+
+PL-900
+Microsoft Certified:
+Power Platform Fundamentals
+
+PL-400
+Microsoft Certified:
+Power Platform Developer Associate
+
+DP-700
+Microsoft Certified:
+Fabric Data Engineer Associate
+
+DP-600
+Microsoft Certified:
+Fabric Analytics Engineer Associate
 ```
 
-### 6.3 Aquatic & Amphibious Capability
+Certification status must be checked against Microsoft Learn before recommending an exam.
 
-Training areas:
+---
 
-- advanced swimming;
-- water survival;
-- rescue swimming;
-- buoyancy and flotation;
-- maritime navigation fundamentals;
-- marine weather;
-- boat safety;
-- maritime communications;
-- aquatic first aid;
-- amphibious mobility;
-- familiarization with RHIBs, catamarans, USVs, ROVs, AUVs and amphibious vehicles.
+# 5. Retirement-Aware Certification Engine
+
+Microsoft changes and retires exams regularly.
+
+JFXLMS should classify:
 
 ```text
-Aircraft
-   ↓
-Coastal Zone
-   ↓
-Surface Vessel
-   ↓
-Amphibious Vehicle
-   ↓
-Underwater Systems
+ACTIVE
+RETIRING
+RETIRED
+ANNOUNCED
+REPLACED
 ```
 
-### 6.4 Special Aviation Fundamentals
-
-Training areas:
-
-- aviation safety;
-- meteorology;
-- navigation;
-- communications;
-- human factors;
-- risk management;
-- air/sea coordination;
-- search operations;
-- evacuation support;
-- UAV/VTOL familiarization;
-- helicopter, STOL and seaplane operational awareness.
-
-The program separates pilot qualification from mission-specialist, rescue, engineering, communications, medical, and unmanned-systems roles.
-
-### 6.5 Search, Rescue & Operational Medicine
-
-Training emphasizes:
-
-- trauma first aid;
-- bleeding control;
-- hypothermia;
-- immobilization;
-- triage;
-- maritime rescue;
-- flood rescue;
-- mountain rescue;
-- aviation-incident response;
-- search coordination;
-- casualty stabilization;
-- evacuation support.
+Example transitions relevant in 2026:
 
 ```text
-Detection
+AI-900 → RETIRED
+AI-901 → ACTIVE successor pathway
+
+AI-102 → RETIRED
+AI-103 → ACTIVE successor pathway
+
+PL-500 → RETIRED
+
+PL-200 → RETIRED
+
+AZ-500 → RETIRED
+```
+
+Therefore old LinkedIn Learning content may still be educationally useful, but it must not be presented as a current exam path when the corresponding Microsoft exam has retired.
+
+---
+
+# 6. Credential Registry Schema
+
+```yaml
+credential:
+  provider: microsoft
+  code: AI-103
+  name: Azure AI Apps and Agents Developer Associate
+  status: active
+  level: intermediate
+  domains:
+    - azure
+    - ai
+    - agents
+    - generative_ai
+  official_source: microsoft_learn
+  last_verified: 2026-09-10
+  prerequisites: []
+  mapped_learning:
+    linkedin: []
+    nptel: []
+    jfxlms_labs: []
+```
+
+---
+
+# 7. Certification Status Guard
+
+```text
+Learner selects certification
+         ↓
+Credential Registry
+         ↓
+Current status?
+    ├── ACTIVE → continue
+    ├── RETIRING → warning + migration route
+    └── RETIRED → redirect to current credential
+```
+
+---
+
+# 8. Microsoft AI Fundamentals Route — AI-901
+
+Current Microsoft AI Fundamentals route emphasizes:
+
+- AI concepts;
+- responsible AI;
+- Microsoft Foundry;
+- basic Python familiarity;
+- Azure AI workloads;
+- information extraction;
+- AI solution fundamentals.
+
+Recommended JFXLMS route:
+
+```text
+Python Foundations
+      ↓
+AI Fundamentals
+      ↓
+NPTEL ML / AI Foundations
+      ↓
+LinkedIn Azure AI Essentials
+      ↓
+JFXLMS AI Simulation Labs
+      ↓
+Microsoft Learn AI-901 Objectives
+      ↓
+Practice Assessment
+      ↓
+AI-901
+```
+
+---
+
+# 9. AI-901 Simulation Labs
+
+Suggested JFXLMS labs:
+
+```text
+Lab AI901-01
+Classification vs Regression
+
+Lab AI901-02
+Responsible AI Scenario Simulator
+
+Lab AI901-03
+NLP Workload Selection
+
+Lab AI901-04
+Computer Vision Workload Selection
+
+Lab AI901-05
+Information Extraction Pipeline
+
+Lab AI901-06
+Foundry Resource Selection
+```
+
+These labs measure concepts and practical reasoning, not exam-question memorization.
+
+---
+
+# 10. LinkedIn Learning Mapping — AI Fundamentals
+
+LinkedIn Learning currently provides:
+
+```text
+Microsoft Azure AI Essentials Professional Certificate
+```
+
+and also maintains Azure AI certification-preparation material.
+
+Recommended role:
+
+```text
+LinkedIn Learning
+      ↓
+Concept Introduction
+      ↓
+Guided Demonstrations
+      ↓
+JFXLMS Simulation
+      ↓
+Microsoft Learn Validation
+```
+
+JFXLMS should prefer current AI-901 objectives even if older LinkedIn content references AI-900.
+
+---
+
+# 11. NPTEL Mapping — AI Fundamentals
+
+Recommended NPTEL foundations:
+
+```text
+Python for Data Science
+Introduction to Machine Learning
+Artificial Intelligence:
+Knowledge Representation and Reasoning
+```
+
+Optional advanced reinforcement:
+
+```text
+Deep Learning
+Introduction to Large Language Models
+```
+
+---
+
+# 12. Microsoft Azure AI Apps & Agents Route — AI-103
+
+AI-103 currently validates skills around:
+
+- planning/managing Azure AI solutions;
+- generative AI;
+- agentic solutions;
+- computer vision;
+- text analysis;
+- information extraction;
+- Microsoft Foundry;
+- Python.
+
+Architecture:
+
+```text
+AI-901 / Equivalent Foundation
+       ↓
+Python + APIs
+       ↓
+NPTEL ML / LLM
+       ↓
+LinkedIn AI / Azure Content
+       ↓
+JFXLMS Agent & RAG Labs
+       ↓
+Microsoft Learn AI-103 Path
+       ↓
+Practice Assessment
+       ↓
+AI-103
+```
+
+---
+
+# 13. AI-103 Simulation Lab Architecture
+
+```text
+Scenario
    ↓
-Localization
+Azure-like Service Topology
+   ↓
+Agent / Model / Data Choice
+   ↓
+Implementation Task
+   ↓
+Telemetry
+   ↓
+Evaluation
+   ↓
+Skill Evidence
+```
+
+---
+
+# 14. AI-103 Lab Set
+
+```text
+AI103-01
+Generative AI Application Architecture
+
+AI103-02
+Agent Tool Selection
+
+AI103-03
+RAG Retrieval Simulation
+
+AI103-04
+Prompt / Context Evaluation
+
+AI103-05
+Vision Processing Workflow
+
+AI103-06
+Text Analysis Pipeline
+
+AI103-07
+Information Extraction
+
+AI103-08
+Responsible AI & Monitoring
+
+AI103-09
+Agent Failure Recovery
+
+AI103-10
+Production AI Architecture
+```
+
+---
+
+# 15. NPTEL Mapping — AI-103
+
+Strong complementary courses:
+
+```text
+Introduction to Machine Learning
+Deep Learning
+Introduction to Large Language Models (LLMs)
+Generative AI for Computer Vision
+Artificial Intelligence:
+Knowledge Representation and Reasoning
+```
+
+NPTEL supplies theoretical depth that is intentionally broader than a Microsoft product exam.
+
+---
+
+# 16. Microsoft AI Agent Builder Route — AB-620
+
+AB-620 targets advanced agent development with:
+
+- Copilot Studio;
+- Power Platform;
+- enterprise systems;
+- agent topics/tools;
+- APIs;
+- multi-agent solutions;
+- agent lifecycle testing/management.
+
+Recommended path:
+
+```text
+PL-900
+   ↓
+Agent Concepts
+   ↓
+NPTEL AI / LLM Foundation
+   ↓
+JFXLMS Multi-Agent Simulator
+   ↓
+Microsoft Learn AB-620
+   ↓
+Enterprise Integration Lab
+   ↓
+AB-620
+```
+
+---
+
+# 17. AB-620 Multi-Agent Simulator
+
+```text
+User Goal
+   ↓
+Agent Router
+   ├── Knowledge Agent
+   ├── Process Agent
+   ├── Data Agent
+   └── Human Escalation Agent
+   ↓
+Tool Invocation
+   ↓
+Policy
+   ↓
+Outcome
+```
+
+Assess:
+
+- orchestration;
+- tool design;
+- system integration;
+- access control;
+- testing;
+- agent management.
+
+---
+
+# 18. Agentic Business Process Lab
+
+Integrate JFXAI4BPM:
+
+```text
+Business Process
+      ↓
+Copilot/Agent Simulation
+      ↓
+JFXAI4BPM Process Twin
+      ↓
+Agent Action
+      ↓
+Rule Gate
+      ↓
+Workflow Result
+```
+
+This creates realistic AB-620-style enterprise scenarios without coupling the lab to production systems.
+
+---
+
+# 19. Microsoft Power Platform Fundamentals — PL-900
+
+Current PL-900 is a strong entry route for:
+
+- Power Apps;
+- Dataverse;
+- Power Automate;
+- business solution concepts.
+
+Recommended JFXLMS path:
+
+```text
+Business Process Fundamentals
+      ↓
+LinkedIn PL-900 Cert Prep
+      ↓
+JFXAI4BPM Process Simulator
+      ↓
+Power Platform Simulation Lab
+      ↓
+Microsoft Learn PL-900
+      ↓
+PL-900
+```
+
+---
+
+# 20. LinkedIn Learning Mapping — PL-900
+
+LinkedIn Learning currently provides a Microsoft Press PL-900 certification-preparation course and practice material.
+
+JFXLMS should register it as:
+
+```yaml
+learning_resource:
+  provider: linkedin_learning
+  type: cert_prep
+  target: PL-900
+  authority: supplemental
+```
+
+Microsoft Learn remains authoritative for the current exam objectives.
+
+---
+
+# 21. PL-900 Simulation Labs
+
+```text
+PL900-01
+Select Power Platform Component
+
+PL900-02
+Dataverse Data Modeling
+
+PL900-03
+Power Apps Business Scenario
+
+PL900-04
+Power Automate Workflow
+
+PL900-05
+Connector Selection
+
+PL900-06
+Business Process Automation
+```
+
+---
+
+# 22. Microsoft Power Platform Developer — PL-400
+
+PL-400 currently focuses on:
+
+- technical design;
+- Dataverse;
+- Power Apps;
+- process automation;
+- platform extension;
+- integrations;
+- Power Fx;
+- REST APIs;
+- ALM;
+- AI tools/agents.
+
+Recommended path:
+
+```text
+PL-900
+  ↓
+JavaScript / TypeScript / C#
+  ↓
+REST / JSON
+  ↓
+Business Process Simulation
+  ↓
+LinkedIn PL-400 Cert Prep
+  ↓
+JFXLMS Integration Labs
+  ↓
+Microsoft Learn PL-400
+  ↓
+PL-400
+```
+
+---
+
+# 23. PL-400 Migration Awareness
+
+Microsoft currently indicates that an updated **AB-400** exam is planned for availability beginning October 16, 2026.
+
+At the current architecture date, PL-400 remains an active exam.
+
+JFXLMS should therefore model:
+
+```text
+PL-400
+ACTIVE
+   ↓
+Migration Notice
+   ↓
+AB-400
+ANNOUNCED / FUTURE
+```
+
+Do not switch the learner automatically until Microsoft marks the replacement route officially available.
+
+---
+
+# 24. PL-400 Process Integration Lab
+
+```text
+JFXAI4BPM Scenario
+      ↓
+Dataverse-like Model
+      ↓
+Custom Connector
+      ↓
+External REST API
+      ↓
+Workflow
+      ↓
+Business Rule
+      ↓
+Integration Test
+```
+
+---
+
+# 25. Microsoft Azure Administrator — AZ-104
+
+AZ-104 remains a key active infrastructure route.
+
+Current skills include:
+
+- identity/governance;
+- storage;
+- compute;
+- virtual networking;
+- monitoring.
+
+Recommended JFXLMS path:
+
+```text
+NPTEL Cloud Computing
+      ↓
+LinkedIn Azure Administration
+      ↓
+JFXLMS Azure Infrastructure Simulator
+      ↓
+Microsoft Learn AZ-104
+      ↓
+Scenario Assessment
+      ↓
+AZ-104
+```
+
+---
+
+# 26. NPTEL Cloud Foundation
+
+NPTEL currently offers:
+
+```text
+Cloud Computing
+IIT Kharagpur
+
+Cloud Computing and Distributed Systems
+IIT Patna
+
+Edge Computing
+IIT Kanpur
+```
+
+The Cloud Computing course includes topics such as:
+
+- architecture;
+- virtualization;
+- service models;
+- cloud economics;
+- security;
+- Docker;
+- serverless;
+- cloud migration;
+- IoT/cloud;
+- and a Microsoft Azure case study/demo.
+
+This makes it a strong academic complement to AZ-104.
+
+---
+
+# 27. AZ-104 Infrastructure Simulator
+
+```text
+Azure Subscription Twin
+      ↓
+Resource Groups
+      ↓
+Identity
+Storage
+VMs
+Containers
+Networks
+Monitoring
+      ↓
+Failure Injection
+      ↓
+Learner Remediation
+```
+
+---
+
+# 28. AZ-104 Lab Set
+
+```text
+AZ104-01
+Identity and RBAC
+
+AZ104-02
+Storage Architecture
+
+AZ104-03
+Virtual Machine Deployment
+
+AZ104-04
+Container Deployment
+
+AZ104-05
+VNet / Subnet / Routing
+
+AZ104-06
+Network Security
+
+AZ104-07
+Monitoring / Alerts
+
+AZ104-08
+Backup / Recovery Scenario
+
+AZ104-09
+Governance / Policy
+
+AZ104-10
+Cost-Aware Administration
+```
+
+---
+
+# 29. LinkedIn Learning Mapping — AZ-104
+
+LinkedIn Learning currently offers Microsoft Azure Administrator Associate AZ-104 certification-preparation material.
+
+Recommended integration:
+
+```text
+Video Lesson
+      ↓
+Lab Mapping
+      ↓
+JFXLMS Scenario
+      ↓
+Evidence
+```
+
+Example:
+
+```text
+LinkedIn Topic:
+Virtual Networks
+      ↓
+JFXLMS Lab:
+AZ104-05 VNet Design & Failure Recovery
+```
+
+---
+
+# 30. Microsoft Azure Solutions Architect — AZ-305
+
+AZ-305 validates architecture skills around:
+
+- identity;
+- governance;
+- monitoring;
+- data;
+- business continuity;
+- infrastructure.
+
+Microsoft currently requires a prerequisite certification for the Azure Solutions Architect Expert credential.
+
+Recommended route:
+
+```text
+AZ-104 Certification
+      ↓
+NPTEL Distributed Systems / Cloud
+      ↓
+LinkedIn AZ-305 Cert Prep
+      ↓
+JFXLMS Architecture Simulator
+      ↓
+Microsoft Learn AZ-305
+      ↓
+AZ-305
+      ↓
+Azure Solutions Architect Expert
+```
+
+---
+
+# 31. AZ-305 Architecture Simulator
+
+```text
+Business Requirements
+      ↓
+Architecture Constraints
+      ↓
+Candidate Azure Designs
+      ↓
+Cost / Security / Availability
+      ↓
+Failure Scenarios
+      ↓
+Architecture Decision
+      ↓
+Trade-Off Explanation
+```
+
+---
+
+# 32. AZ-305 Domain Labs
+
+```text
+AZ305-01
+Identity Architecture
+
+AZ305-02
+Governance Architecture
+
+AZ305-03
+Observability Architecture
+
+AZ305-04
+Data Platform Selection
+
+AZ305-05
+Integration Architecture
+
+AZ305-06
+Business Continuity
+
+AZ305-07
+Network / Traffic Architecture
+
+AZ305-08
+Migration Scenario
+
+AZ305-09
+Multi-Region Design
+
+AZ305-10
+Well-Architected Trade-Off Review
+```
+
+---
+
+# 33. Microsoft Fabric Data Engineer — DP-700
+
+DP-700 currently focuses on:
+
+- loading patterns;
+- data architectures;
+- orchestration;
+- ingestion/transformation;
+- security;
+- management;
+- monitoring;
+- optimization.
+
+LinkedIn Learning currently provides a Microsoft Press DP-700 certification-preparation course.
+
+---
+
+# 34. DP-700 Route
+
+```text
+Python for Data Science
+      ↓
+NPTEL Cloud / Data Foundation
+      ↓
+LinkedIn DP-700 Cert Prep
+      ↓
+JFXLMS Data Pipeline Simulator
+      ↓
+Microsoft Learn DP-700
+      ↓
+DP-700
+```
+
+---
+
+# 35. DP-700 Data Engineering Simulator
+
+```text
+Source Data
+    ↓
+Ingestion
+    ↓
+Lakehouse / Warehouse
+    ↓
+Transformation
+    ↓
+Batch / Streaming
+    ↓
+Orchestration
+    ↓
+Monitoring
+    ↓
+Optimization
+```
+
+---
+
+# 36. DP-700 Lab Set
+
+```text
+DP700-01
+Workspace Configuration
+
+DP700-02
+Lakehouse Design
+
+DP700-03
+Batch Pipeline
+
+DP700-04
+Streaming Pipeline
+
+DP700-05
+PySpark Transformation
+
+DP700-06
+KQL / Eventstream Scenario
+
+DP700-07
+Pipeline Orchestration
+
+DP700-08
+Security
+
+DP700-09
+Monitoring
+
+DP700-10
+Performance Optimization
+```
+
+---
+
+# 37. Microsoft Fabric Analytics Engineer — DP-600
+
+DP-600 is appropriate for the JFXLMS analytics layer.
+
+Recommended skills:
+
+```text
+Data Preparation
+Semantic Models
+Warehouses / Lakehouses
+Analytics Asset Security
+Enterprise Reporting
+```
+
+---
+
+# 38. DP-600 Simulator
+
+```text
+Raw Learning / Simulation Data
+       ↓
+Analytics Engineering
+       ↓
+Semantic Model
+       ↓
+KPI Definition
+       ↓
+Dashboard
+       ↓
+Decision Scenario
+```
+
+This can reuse telemetry produced by all OpenTwin simulators.
+
+---
+
+# 39. Simulator-to-Certification Bridge
+
+The central new JFXLMS component should be:
+
+```text
+SIMULATION SKILL EVIDENCE ADAPTER
+```
+
+Architecture:
+
+```text
+Simulator
+   ↓
+Telemetry
+   ↓
+Skill Evidence Extractor
+   ↓
+Competency Graph
+   ↓
+Microsoft Exam Objective Mapping
+   ↓
+Readiness Score
+```
+
+---
+
+# 40. Simulator Registry
+
+```yaml
+simulator:
+  id: azure_infrastructure_twin
+  domain: cloud
+  mapped_credentials:
+    - AZ-104
+    - AZ-305
+  evidence:
+    - deploy_compute
+    - configure_network
+    - manage_identity
+    - monitor_resources
+```
+
+---
+
+# 41. Skill Evidence Record
+
+```yaml
+skill_evidence:
+  learner: user_001
+  simulator: azure_infrastructure_twin
+  scenario: vnet_outage_03
+  skill: troubleshoot_virtual_network
+  result: passed
+  score: 0.86
+  attempts: 2
+  evidence:
+    - topology_before
+    - learner_actions
+    - topology_after
+    - explanation
+```
+
+---
+
+# 42. Microsoft Objective Mapping
+
+```yaml
+objective_mapping:
+  credential: AZ-104
+  objective: configure_and_manage_virtual_networking
+  jfxlms_labs:
+    - AZ104-05
+    - AZ104-06
+  linkedin_resources:
+    - az104_networking_module
+  nptel_resources:
+    - cloud_computing_networking
+```
+
+---
+
+# 43. Learning Path Graph
+
+```text
+Prerequisite Skill
+      ↓
+NPTEL Theory
+      ↓
+LinkedIn Guided Content
+      ↓
+JFXLMS Simulation
+      ↓
+Microsoft Learn Objective
+      ↓
+Practice
+      ↓
+Readiness
+```
+
+Order is configurable; learners may skip material when evidence demonstrates mastery.
+
+---
+
+# 44. Adaptive Route Engine
+
+```text
+Learner Evidence
+      ↓
+Skill Graph
+      ↓
+Gap Detection
+      ↓
+Recommended Resource
+      ├── NPTEL
+      ├── LinkedIn
+      ├── Microsoft Learn
+      └── JFXLMS Lab
+      ↓
+Reassessment
+```
+
+---
+
+# 45. Route Recommendation Example
+
+```text
+Learner:
+Strong Python
+Weak Cloud Networking
+Moderate AI
+
+Target:
+AI-103
+
+Recommended:
+1. NPTEL Cloud Computing networking modules
+2. LinkedIn Azure Essentials
+3. JFXLMS networking/identity simulation
+4. Microsoft Learn AI-103 agent modules
+5. JFXLMS RAG + agent labs
+6. AI Skills Navigator practice assessment
+```
+
+---
+
+# 46. LinkedIn Learning Connector Model
+
+JFXLMS should treat LinkedIn Learning as an external learning-content provider.
+
+Canonical interface:
+
+```text
+LearningProvider
+├── searchCourses()
+├── getCourseMetadata()
+├── getLearningPath()
+├── registerExternalCompletion()
+└── mapResourceToSkill()
+```
+
+Actual API availability and enterprise access depend on LinkedIn Learning licensing.
+
+---
+
+# 47. LinkedIn Learning Manual-Link Fallback
+
+If direct APIs are unavailable:
+
+```text
+JFXLMS Course
+      ↓
+External Resource Link
+      ↓
+LinkedIn Learning
+      ↓
+Learner Completes
+      ↓
+Completion Evidence
+      ↓
+JFXLMS Verification / User Import
+```
+
+Do not use scraping to obtain LinkedIn Learning progress.
+
+---
+
+# 48. NPTEL Integration Model
+
+```text
+JFXLMS
+   ↓
+NPTEL Course Registry
+   ↓
+Course Metadata
+   ↓
+External SWAYAM/NPTEL Enrollment
+   ↓
+Course / Exam
+   ↓
+NPTEL Certificate
+   ↓
+JFXLMS Evidence Registry
+```
+
+---
+
+# 49. NPTEL Course Registry Schema
+
+```yaml
+learning_resource:
+  provider: nptel
+  title: Cloud Computing
+  institution: IIT Kharagpur
+  year: 2026
+  type: swayam_course
+  skills:
+    - cloud_architecture
+    - virtualization
+    - containers
+    - security
+  maps_to:
+    - AZ-104
+    - AZ-305
+```
+
+---
+
+# 50. NPTEL AI Route
+
+Recommended sequence:
+
+```text
+Python for Data Science
+      ↓
+Introduction to Machine Learning
+      ↓
+Deep Learning
+      ↓
+Introduction to Large Language Models
+      ↓
+JFXLMS AI Labs
+      ↓
+AI-901 / AI-103 / AB-620
+```
+
+This is a competency mapping, not a claim of direct Microsoft exam equivalence.
+
+---
+
+# 51. NPTEL Cloud Route
+
+```text
+Cloud Computing
+      +
+Cloud Computing and Distributed Systems
+      +
+Edge Computing
+      ↓
+JFXLMS Azure Infrastructure Labs
+      ↓
+AZ-104
+      ↓
+AZ-305
+```
+
+---
+
+# 52. NPTEL Software Architecture Route
+
+Useful supporting course:
+
+```text
+Software Conceptual Design
+```
+
+Map to:
+
+- architecture reasoning;
+- subsystem decomposition;
+- UML;
+- quality attributes.
+
+Supports:
+
+```text
+AZ-305
+PL-400
+AI-103
+```
+
+at a platform-neutral conceptual level.
+
+---
+
+# 53. NPTEL Finance Simulation Route
+
+For financial simulation curricula:
+
+```text
+Advanced Financial Analytics
+```
+
+can complement:
+
+- JFXAI4ATS trading simulator;
+- JFXAI4OBS banking simulator;
+- DP-700 data engineering;
+- DP-600 analytics.
+
+It is not a Microsoft financial certification.
+
+---
+
+# 54. Portfolio Simulator Integration
+
+JFXLMS can federate labs from existing Robotics Intelligent Systems projects:
+
+```text
+JFXAI4BPM
+Business Process Simulation
+
+JFXOSMS
+Microfactory Simulation
+
+JFXFMIS
+Farm / Agricultural Digital Twin
+
+JFXOTBS / JFXJTS
+Airline / Flight Simulation
+
+JFXAI4ATS
+Trading / Market Simulation
+
+JFXAI4OBS
+Open Banking / Lending Simulation
+
+JFXCMS
+Collaborative Development / Contest Simulation
+```
+
+---
+
+# 55. Simulator Federation Architecture
+
+```text
+                         JFXLMS
+                            │
+                    Simulation Gateway
+                            │
+ ┌──────────┬──────────┬────┼────┬─────────┬──────────┬─────────┐
+ ▼          ▼          ▼         ▼         ▼          ▼         ▼
+BPM      Factory      Farm     Flight    Trading    Banking   Contest
+Twin       Twin       Twin      Twin       Twin      Twin      Twin
+                            │
+                            ▼
+                      Skill Evidence
+                            │
+                            ▼
+                    Certification Graph
+```
+
+---
+
+# 56. Process Simulator → Power Platform Route
+
+```text
+JFXAI4BPM
+Process Model
+      ↓
+Business Rule Lab
+      ↓
+Workflow Automation
+      ↓
+Connector Lab
+      ↓
+PL-900
+      ↓
+PL-400
+      ↓
+AB-620
+```
+
+---
+
+# 57. Microfactory Simulator → Azure Route
+
+```text
+JFXOSMS
+Factory Digital Twin
+      ↓
+IoT / Edge Telemetry
+      ↓
+Cloud Ingestion
+      ↓
+Data Engineering
+      ↓
+AI Maintenance Agent
+      ↓
+AZ-104
+DP-700
+AI-103
+```
+
+---
+
+# 58. Farm Simulator → Azure / Data Route
+
+```text
+JFXFMIS
+Sensors / GIS / IoT
+      ↓
+Edge / Cloud
+      ↓
+Streaming
+      ↓
+Analytics
+      ↓
+AI Forecasting
+      ↓
+AZ-104
+DP-700
+DP-600
+AI-103
+```
+
+NPTEL Edge Computing is an especially useful theoretical complement.
+
+---
+
+# 59. Air Transport Simulator → Architecture Route
+
+```text
+JFXOTBS / JFXJTS
+Flight Operations Twin
+      ↓
+Distributed Services
+      ↓
+High Availability
+      ↓
+Observability
+      ↓
+Data Pipelines
+      ↓
+AI Assistance
+      ↓
+AZ-104
+AZ-305
+DP-700
+AI-103
+```
+
+Certification labs should remain IT/cloud scenarios, not safety-critical flight-control qualification.
+
+---
+
+# 60. Trading Simulator → Data & AI Route
+
+```text
+JFXAI4ATS
+Market Data
+      ↓
+Streaming
+      ↓
+Feature / Analytics Pipeline
+      ↓
+Model / Agent
+      ↓
+Backtest
+      ↓
+Monitoring
+      ↓
+DP-700
+DP-600
+AI-103
+```
+
+---
+
+# 61. Open Banking Simulator → Power Platform / Data / Architecture
+
+```text
+JFXAI4OBS
+Consent / Lending / Payments
+      ↓
+Business Process
+      ↓
+API Integration
+      ↓
+Data / Analytics
+      ↓
+AI Decision Support
+      ↓
+PL-400
+AZ-305
+DP-700
+AI-103
+```
+
+No lab result should be treated as a real credit decision.
+
+---
+
+# 62. JFXCMS → Developer Skill Evidence
+
+```text
+Collaborative Development
+      ↓
+Issue
+      ↓
+Implementation
+      ↓
+Pull Request
+      ↓
+CI
+      ↓
+Validated Technical Evidence
+      ↓
+JFXLMS Skill Graph
+```
+
+Useful for certification preparation in:
+
+- PL-400;
+- AI-103;
+- AZ-104 automation;
+- DP-700 engineering.
+
+---
+
+# 63. Scenario-as-Curriculum Pattern
+
+Instead of:
+
+```text
+Watch Course
+   ↓
+Quiz
+```
+
+prefer:
+
+```text
+Scenario
+   ↓
+Need-to-Know Concepts
+   ↓
+Learning Resource
+   ↓
+Simulation
+   ↓
+Reflection
    ↓
 Assessment
-   ↓
-Rescue
-   ↓
-Stabilization
-   ↓
-Evacuation
-   ↓
-Medical Facility
 ```
 
-### 6.6 Geospatial, Communications and Digital Systems
+---
 
-Core areas:
-
-- GIS / QGIS;
-- GNSS;
-- cartography;
-- photogrammetry;
-- satellite imagery;
-- UAV mapping;
-- terrain/coastal analysis;
-- radio fundamentals;
-- IP networking;
-- satellite communications;
-- mesh networking;
-- Linux;
-- IoT;
-- edge computing;
-- telemetry;
-- cybersecurity fundamentals;
-- redundant communications.
-
-### 6.7 Drones, Robotics and AI
-
-Educational platforms may include:
-
-- UAV;
-- USV;
-- UGV;
-- ROV;
-- AUV;
-- ROS 2;
-- computer vision;
-- edge AI;
-- supervised autonomy;
-- search-support analytics;
-- route optimization;
-- damage-assessment support.
-
-Critical decisions remain human-supervised.
-
-### 6.8 Expeditionary Engineering
-
-Training areas:
-
-- temporary power;
-- microgrids;
-- communications nodes;
-- water support;
-- mobile medical facilities;
-- temporary infrastructure;
-- engineering inspection;
-- logistics;
-- vehicle/equipment maintenance;
-- disaster-response infrastructure.
+# 64. Example Scenario — Azure Microfactory
 
 ```text
-Energy
-  ↓
-Microgrid
-  ↓
-Communications
-  ↓
-Water
-  ↓
-Medical
-  ↓
-Operations Center
+Scenario:
+Factory telemetry ingestion latency is too high.
+
+Learner must:
+- diagnose architecture;
+- choose ingestion pattern;
+- configure network/security;
+- design streaming data flow;
+- monitor solution.
+
+Mapped credentials:
+AZ-104
+AZ-305
+DP-700
 ```
 
-### 6.9 OpenTwin Amphibious Operations Lab
+---
+
+# 65. Example Scenario — Agentic Banking Workflow
 
 ```text
-REAL WORLD
-Aircraft
-Vessel
-UAV
-Amphibious Vehicle
-Sensors
-Personnel
+Scenario:
+Create a controlled AI assistant for a loan-service workflow.
+
+Learner must:
+- model process;
+- expose API tools;
+- define agent boundaries;
+- configure human approval;
+- log decisions.
+
+Mapped credentials:
+AI-103
+AB-620
+PL-400
+```
+
+---
+
+# 66. Example Scenario — Smart Farm Edge
+
+```text
+Scenario:
+Farm connectivity is intermittent.
+
+Learner must:
+- place edge processing;
+- buffer telemetry;
+- design synchronization;
+- manage identity;
+- monitor devices/data.
+
+Mapped:
+AZ-104
+AZ-305
+DP-700
+
+NPTEL:
+Edge Computing
+Cloud Computing
+```
+
+---
+
+# 67. Example Scenario — Airline Analytics
+
+```text
+Scenario:
+Operational delays need near-real-time analysis.
+
+Learner must:
+- ingest event streams;
+- transform data;
+- build semantic metrics;
+- create operations dashboard.
+
+Mapped:
+DP-700
+DP-600
+AZ-305
+```
+
+---
+
+# 68. Certification Readiness Score
+
+Suggested model:
+
+```text
+Readiness =
+  25% Concept Knowledge
++ 35% Simulation Performance
++ 20% Practical Project Evidence
++ 10% Practice Assessment
++ 10% Reflection / Explanation
+```
+
+Weights should be configurable.
+
+JFXLMS should not claim that a readiness score predicts official exam results with certainty.
+
+---
+
+# 69. Competency Levels
+
+```text
+0 — Not Assessed
+1 — Awareness
+2 — Guided Practice
+3 — Independent Practice
+4 — Scenario Proficiency
+5 — Transfer / Architecture
+```
+
+---
+
+# 70. Evidence Hierarchy
+
+```text
+Course Viewed
       ↓
-Telemetry
+Quiz Passed
       ↓
-OPENTWIN
+Guided Lab
       ↓
-Simulation
-AI
-GIS
-Weather
-Maintenance
-Logistics
+Independent Lab
       ↓
-Training / Operations Dashboard
+Scenario Challenge
+      ↓
+Project / Portfolio
 ```
 
-Possible technologies:
-
-- ROS 2
-- Gazebo
-- QGIS
-- OpenDroneMap
-- PX4
-- ArduPilot
-- OpenModelica
-- Python
-- PostgreSQL/PostGIS
-- Grafana
-- MQTT
-- Docker
-- Kubernetes
-
-### 6.10 Multidomain Final Exercise
-
-The culminating exercise can use a humanitarian scenario such as a severe coastal storm, flood, infrastructure outage, or aviation/maritime rescue event.
-
-Evaluation criteria:
-
-- safety;
-- leadership;
-- coordination;
-- rescue performance;
-- engineering judgment;
-- medical support;
-- communications;
-- logistics;
-- human-machine teaming;
-- mission completion.
-
-### 6.11 Professional Specializations
-
-After the common curriculum, JFXLMS can model specialty pathways such as:
-
-- Air Operations Specialist
-- Amphibious Operations Specialist
-- Rescue Swimmer
-- Operational Medic
-- UAV / Robotics Operator
-- Communications & Cyber Specialist
-- Geospatial Intelligence Specialist
-- Amphibious Vehicle Specialist
-- Engineering Specialist
-- OpenTwin / AI Systems Specialist
-- Human Augmentation & XR Systems Specialist
+Higher levels should depend increasingly on applied evidence.
 
 ---
 
-## 7. XR, Haptics & High-Mobility Exoskeleton Program
-
-The **OpenTwin XR & Human Augmentation Program** adds wearable robotics, augmented reality, haptic feedback, biomechanical sensing, simulation, and digital-twin technology to the professional training pathway.
-
-Its purpose is to improve **mobility assistance, endurance, rescue, load handling, maintenance, engineering work, situational awareness, and immersive training**. It is not designed around offensive weapon integration.
-
-### 7.1 Reference Architecture
-
-```text
-Operator
-   |
-   v
-Wearable Sensors
-   |
-   +------------------+
-   |                  |
-   v                  v
-Exoskeleton        AR Headset
-   |                  |
-Motion / Force     Maps / Alerts
-   |                  |
-   +--------+---------+
-            |
-            v
-      Haptic Interface
-            |
-            v
-       Edge Computer
-            |
-            v
-        OpenTwin
-            |
-   AI + Simulation + V&V
-```
-
-### 7.2 Human Factors & Biomechanics
-
-Curriculum:
-
-- biomechanics;
-- gait analysis;
-- ergonomics;
-- load distribution;
-- balance;
-- fatigue;
-- joint mobility;
-- injury prevention;
-- progressive adaptation;
-- emergency disengagement;
-- human-machine interaction.
-
-Design principle:
-
-> **The exoskeleton assists the operator; it must not remove human control or prevent rapid safe disengagement.**
-
-### 7.3 High-Mobility Exoskeleton
-
-Potential assistance areas:
-
-- hips;
-- knees;
-- ankles;
-- back;
-- shoulders;
-- arms.
-
-Priority should be given to:
-
-- low mass;
-- mobility;
-- environmental resistance;
-- graceful degradation;
-- maintainability;
-- safe passive behavior.
-
-Training modes:
-
-- Mobility Mode
-- Load Mode
-- Rescue Mode
-- Engineering Mode
-- Terrain Mode
-- Energy-Saving Mode
-
-### 7.4 Augmented Reality
-
-The AR interface can present only mission-relevant, safety-oriented information:
-
-- navigation;
-- maps;
-- team position;
-- weather;
-- terrain;
-- rescue grid;
-- vehicle/equipment status;
-- medical alerts;
-- energy status;
-- environmental hazards.
-
-```text
-AR Display
-   |
-   +-- Search Grid
-   +-- Last Known Position
-   +-- Drone Imagery
-   +-- Thermal Detections
-   +-- Evacuation Route
-   +-- Medical Facility
-```
-
-### 7.5 Haptic Interface
-
-Haptic cues can reduce visual/audio overload by communicating:
-
-- directional prompts;
-- navigation proximity;
-- environmental warnings;
-- system alerts;
-- training resistance;
-- posture or movement feedback.
-
-The exact cue vocabulary should be standardized, validated, and kept simple.
-
-### 7.6 Immersive Training
-
-```text
-Physical Operator
-       |
-Exoskeleton
-       |
-AR + Haptics
-       |
-Virtual Environment
-       |
-Physics Simulation
-       |
-Digital Twin
-```
-
-Training scenarios may include:
-
-- flood evacuation;
-- maritime rescue;
-- mountain rescue;
-- vessel-deck operations;
-- infrastructure inspection;
-- aircraft maintenance;
-- equipment transport;
-- robot coordination;
-- low-visibility operations.
-
-Simulated variables can include terrain resistance, slope, environmental conditions, visibility, virtual load, and fatigue models.
-
-### 7.7 Amphibious Exoskeleton Considerations
-
-At a high level, the training architecture should consider:
-
-- water and splash resistance;
-- corrosion resistance;
-- protected electronics;
-- sealed or protected joints;
-- redundant sensing;
-- quick release;
-- compatibility with rescue flotation systems;
-- safe passive mode;
-- controlled transition between land and shallow-water environments.
-
-Any design or training involving immersion must prioritize buoyancy, rapid disengagement, electrical safety, and supervised validation.
-
-### 7.8 Exoskeleton + UAV / Robotics
-
-```text
-UAV / Robot
-     |
-Sensors / Imaging
-     |
-Edge AI
-     |
-OpenTwin
-     |
-AR + Haptics
-     |
-Operator
-```
-
-The operator may receive:
-
-- live maps;
-- obstacle warnings;
-- inspection imagery;
-- search detections;
-- route guidance;
-- equipment status.
-
-### 7.9 Operator Digital Twin
-
-The **Operator Twin** may represent:
-
-- posture;
-- motion;
-- workload;
-- heart rate;
-- temperature;
-- estimated fatigue;
-- exoskeleton state;
-- battery state;
-- training performance history.
-
-```text
-Human
- ↓
-Sensors
- ↓
-Operator Twin
- ↓
-AI Analysis
- ↓
-Fatigue / Load Estimate
- ↓
-Assistance Recommendation
-```
-
-Medical or safety-critical interpretations require qualified human oversight.
-
-### 7.10 Adaptive Assistance & Energy Management
-
-Assistance profiles may consider:
-
-```text
-Terrain
-+
-Load
-+
-Operator Movement
-+
-Fatigue Estimate
-+
-Available Energy
-+
-Expected Duration
-```
-
-The system can recommend an assistance profile, while safety-critical limits remain fixed, validated, and human-supervised.
-
-Energy curriculum:
-
-- battery state;
-- interchangeable power modules;
-- consumption monitoring;
-- degraded modes;
-- thermal monitoring;
-- safe shutdown;
-- range/endurance estimation.
-
-### 7.11 Verification & Validation
-
-```text
-Simulation
-   ↓
-Bench Test
-   ↓
-Human Factors Test
-   ↓
-Controlled Walking
-   ↓
-Load Testing
-   ↓
-Terrain Testing
-   ↓
-Environmental Testing
-   ↓
-Supervised Field Training
-```
-
-Key safety functions should include:
-
-- emergency stop;
-- rapid mechanical release;
-- fall detection;
-- temperature monitoring;
-- electrical protection;
-- continuous diagnostics;
-- redundancy for critical sensing;
-- validated force/torque limits.
-
-### 7.12 OpenTwin XR & Human Augmentation Laboratory
-
-```text
-             OPENTWIN XR LAB
-                    |
-      +-------------+-------------+
-      |             |             |
-      v             v             v
-     AR            VR          Haptics
-      \             |            /
-       +------------+-----------+
-                    |
-               Exoskeleton
-                    |
-             Motion Tracking
-                    |
-              Digital Twin
-                    |
-        AI + Physics Simulation
-                    |
-             Training Analytics
-```
-
-Possible educational technology stack:
-
-- OpenXR
-- ROS 2
-- Gazebo
-- Godot or O3DE
-- OpenCV
-- Python / C++
-- MQTT
-- Grafana
-- physics simulation tools
-
----
-
-## 8. Postgraduate Program — Advanced Strategic Multidomain Engineering
-
-### Duration
-
-**2 years / 4 semesters**
-
-### Proposed Award
-
-**Master of Engineering in Strategic Multidomain Systems**
-
-Possible specializations:
-
-- Naval Systems Engineering
-- Nuclear Energy Systems Engineering
-- Artificial Intelligence & Autonomous Systems
-- Aerospace Systems Engineering
-
----
-
-## 9. Semester 11 — Advanced Common Core
-
-All postgraduate students complete:
-
-- Advanced Applied Mathematics
-- Numerical Methods
-- Computational Mechanics
-- Dynamic Systems and Control
-- MBSE / SysML / Arcadia-Capella
-- Advanced Digital Twins
-- High-Performance Computing
-- Reliability Engineering
-- Safety Engineering
-- Cybersecurity for Critical Systems
-- Scientific Machine Learning
-- Research Methodology
-
-```text
-Engineering Requirements
-        |
-        v
-MBSE / SysML / Capella
-        |
-        v
-CAD / Simulation / HPC
-        |
-        v
-Digital Twin
-        |
-        v
-AI / Optimization
-        |
-        v
-Verification & Validation
-```
-
----
-
-## 10. Postgraduate Track — Naval Systems Engineering
-
-### Focus
-
-Marine platforms, autonomous vessels, offshore systems, amphibious systems, research submarines, ROV/AUV systems, and digital ship engineering.
-
-### Core Modules
-
-- Naval Architecture
-- Hydrostatics and Stability
-- Hydrodynamics
-- Ship Resistance and Propulsion
-- Marine Structures
-- Computational Fluid Dynamics
-- Marine Electrical Systems
-- Electric and Hybrid Marine Propulsion
-- Renewable Marine Energy
-- Marine Control and Navigation
-- Autonomous Surface Vehicles
-- ROV and AUV Systems
-- ROS 2 for Marine Robotics
-- Modelica for Marine Systems
-- OpenFOAM
-- Vessel Digital Twins
-- Offshore Engineering
-
-### Example Capstone
-
-**OpenTwin Autonomous Amphibious Catamaran**
-
-```text
-Naval Architecture
-       +
-Electric Propulsion
-       +
-Renewable Energy
-       +
-ROS 2 Autonomy
-       +
-Digital Twin
-       +
-AI Navigation
-```
-
----
-
-## 11. Postgraduate Track — Nuclear Energy Systems Engineering
-
-This specialization is restricted to **civilian nuclear-energy engineering, safety, instrumentation, simulation, and lifecycle management**.
-
-### Core Modules
-
-- Nuclear Physics
-- Applied Quantum Mechanics
-- Reactor Physics Fundamentals
-- Heat Transfer
-- Thermal Hydraulics
-- Nuclear Materials
-- Nuclear Instrumentation
-- Radiation Detection
-- Radiation Protection
-- Reliability Engineering
-- Nuclear Safety
-- Probabilistic Risk Assessment
-- Lifecycle Management
-- Multiphysics Simulation
-- HPC for Energy Systems
-- Nuclear Facility Digital Twins
-- AI for Predictive Maintenance
-
-### Example Capstone
-
-**OpenTwin Nuclear Energy Digital Twin**
-
-```text
-Physics Models
-     |
-Thermal Hydraulics
-     |
-Instrumentation
-     |
-Digital Twin
-     |
-AI Diagnostics
-     |
-Safety Monitoring
-```
-
-The program does not include nuclear weapons design, construction, or optimization.
-
----
-
-## 12. Postgraduate Track — Artificial Intelligence & Autonomous Systems
-
-### Core Modules
-
-- Advanced Machine Learning
-- Deep Learning
-- Transformers and LLMs
-- Vision Transformers
-- Reinforcement Learning
-- Multi-Agent Systems
-- Generative AI
-- Retrieval-Augmented Generation
-- Vector Databases
-- Knowledge Graphs
-- Neuro-Symbolic AI
-- Scientific Machine Learning
-- Physics-Informed Neural Networks
-- Robotics AI
-- Computer Vision
-- Autonomous Systems
-- Edge AI
-- AI Safety
-- MLOps
-- LLMOps
-- AI Agents
-- Model Context Protocol
-- Digital Twins + AI
-
-### Engineering Stack
-
-```text
-Python
-PyTorch
-JAX
-Julia SciML
-LangGraph
-MCP
-Qdrant
-PostgreSQL
-ROS 2
-OpenCV
-Docker
-Kubernetes
-Azure AI
-Local LLMs
-```
-
-### AI-Assisted Engineering Workflow
-
-```text
-Specification
-     |
-AI Agent
-     |
-Codex
-     |
-MCP
-     |
-Engineering Tools
-     |
-Simulation
-     |
-Verification
-```
-
-### Example Capstone
-
-**OpenTwin Autonomous Engineering Agent**
-
-```text
-Natural Language
-       |
-Requirements
-       |
-MBSE
-       |
-Architecture
-       |
-Simulation
-       |
-CAD / Software
-       |
-Verification
-```
-
----
-
-## 13. Postgraduate Track — Aerospace Systems Engineering
-
-### Core Modules
-
-- Aerodynamics
-- Flight Mechanics
-- Aerospace Propulsion
-- Aircraft Structures
-- Composite Materials
-- CFD
-- FEM
-- Flight Control
-- Avionics
-- GNSS / INS Navigation
-- UAV Systems
-- Autonomous Aircraft
-- Flight Software
-- Orbital Mechanics
-- Space Mission Design
-- Satellite Systems
-- Spacecraft Attitude Dynamics
-- SIL / HIL Simulation
-- Aerospace Digital Twins
-- AI for Navigation and Control
-
-### Engineering Stack
-
-```text
-OpenVSP
-OpenFOAM
-GMAT
-JSBSim
-RocketPy
-PX4
-ArduPilot
-ROS 2
-Gazebo
-Modelica
-FreeCAD
-Python
-Julia
-```
-
-### Example Capstone
-
-**OpenTwin Modular Aerospace System**
-
-```text
-Mission Twin
-      |
-Aircraft / UAV Twin
-      |
-Propulsion Twin
-      |
-Avionics Twin
-      |
-Flight Dynamics
-      |
-AI Guidance
-      |
-SIL / HIL
-      |
-Flight Validation
-```
-
----
-
-## 14. Semester 14 — Multidomain Integration
-
-All tracks converge in a final engineering semester:
-
-- Systems-of-Systems Engineering
-- Multiphysics Simulation
-- Advanced Digital Twins
-- AI for Engineering
-- Verification & Validation
-- Safety-Critical Systems
-- Technology Lifecycle Management
-- Innovation Management
-- Thesis / Capstone
-
----
-
-## 15. OpenTwin Multidomain Engineering Laboratory
-
-```text
-                OPENTWIN LABORATORY
-                       |
-      +----------------+----------------+
-      |                |                |
-      v                v                v
-  Naval Twin      Aerospace Twin    Energy Twin
-      |                |                |
-      +----------------+----------------+
-                       |
-                       v
-                     AI Twin
-                       |
-             MBSE + Simulation + HPC
-                       |
-                  V&V / Safety
-```
-
-The laboratory can host vessel digital twins, UAV/aircraft digital twins, energy-system twins, infrastructure twins, autonomous robots, simulation servers, ROS 2 systems, Modelica models, HPC workloads, AI agents, and digital-engineering tools.
-
----
-
-## 16. JFXLMS Learning Architecture
+# 71. Learning Digital Twin
 
 ```text
 Learner
-  |
-  v
-JFXLMS Portal
-  |
-  +----------------------+
-  |                      |
-  v                      v
-Course Engine        AI Tutor
-  |                      |
-SCORM / LTI / xAPI       RAG
-  |                      |
-Assessments           Knowledge
-  |                      |
-  +----------+-----------+
-             |
-             v
-    Engineering Laboratory
-             |
-MBSE / CAD / CAM / CAS
-             |
-Simulation / Digital Twin
-             |
-Projects / Evidence / Portfolio
+   ↓
+Learning Events
+   ↓
+Skill Model
+   ↓
+Learning Digital Twin
+   ├── strengths
+   ├── gaps
+   ├── completed resources
+   ├── simulator evidence
+   ├── readiness
+   └── recommendations
 ```
 
 ---
 
-## 17. Learning Digital Twins
+# 72. Learning Digital Twin Schema
 
-JFXLMS can model learning and engineering progress through:
-
-- **Learner Twin** — competencies, completed courses, assessments, projects, recommendations.
-- **Skill Twin** — skills, prerequisites, proficiency, evidence.
-- **Course Twin** — curriculum, activities, resources, assessments, outcomes.
-- **Laboratory Twin** — simulation configuration, software versions, models, experiment results.
-- **Project Twin** — requirements, architecture, engineering artifacts, verification evidence, team roles.
+```yaml
+learner_twin:
+  learner_id: user_001
+  goals:
+    - AI-103
+  competencies:
+    python: 4
+    azure_identity: 2
+    rag: 3
+    agents: 2
+  evidence:
+    nptel: []
+    linkedin: []
+    simulations: []
+    projects: []
+  readiness:
+    AI-103: 0.61
+```
 
 ---
 
-## 18. AI Tutor and RAG
+# 73. xAPI Event Integration
 
-The AI learning layer can support personalized tutoring, curriculum navigation, STEM explanation, document retrieval, laboratory guidance, assessment feedback, research assistance, engineering-document analysis, and requirements traceability.
+Recommended event:
+
+```json
+{
+  "actor": "learner",
+  "verb": "completed",
+  "object": "AZ104-05-network-simulator",
+  "result": {
+    "score": 0.87,
+    "success": true
+  }
+}
+```
+
+---
+
+# 74. SCORM / LTI Boundary
+
+Use:
+
+```text
+SCORM
+→ packaged course content
+
+LTI
+→ external learning tools / labs
+
+xAPI
+→ detailed learning activity telemetry
+```
+
+---
+
+# 75. External Learning Provider Adapter
+
+```text
+JFXLMS
+   ↓
+Learning Provider Gateway
+      ├── Microsoft Learn
+      ├── LinkedIn Learning
+      └── NPTEL / SWAYAM
+```
+
+The gateway stores metadata and learner-approved evidence, not unauthorized copies of course content.
+
+---
+
+# 76. Copyright / Content Boundary
+
+JFXLMS should not mirror proprietary LinkedIn Learning course videos or Microsoft exam content.
+
+Store:
+
+```text
+Title
+Provider
+Skills
+URL/reference
+Completion evidence
+Mapping metadata
+```
+
+Do not store:
+
+```text
+Copied paid course content
+Real exam questions
+Unauthorized transcripts
+```
+
+---
+
+# 77. Assessment Integrity
+
+JFXLMS simulations should generate original scenarios.
+
+Do not reproduce:
+
+- confidential Microsoft exam items;
+- leaked question banks;
+- braindumps.
+
+The simulator should test the same **skills**, not clone the official exam.
+
+---
+
+# 78. AI Tutor Architecture
 
 ```text
 Learner Question
-      |
-      v
-AI Tutor
-      |
-Retrieval
-      |
-Course + Engineering Knowledge
-      |
-LLM / Reasoning
-      |
-Grounded Response
-      |
-Learning Record
+      ↓
+Target Credential
+      ↓
+Current Objective Map
+      ↓
+Approved Learning Sources
+      ↓
+RAG
+      ↓
+Tutor
+      ↓
+Hint / Explanation / Lab Recommendation
 ```
 
-High-stakes engineering conclusions remain subject to instructor and qualified engineering review.
+---
+
+# 79. Tutor Modes
+
+```text
+Teach
+Practice
+Hint
+Scenario
+Review
+Exam-Readiness
+```
+
+Exam-readiness mode should generate original practice items.
 
 ---
 
-## 19. Educational Technology Integration
+# 80. Certification Route Planner
 
-### Synchronous Learning
-- BigBlueButton
-- OpenVidu
+Input:
 
-### Adaptive and Collaborative Learning
-- OpenTutor
-- PenEcho
-- OpenBoard
+```yaml
+goal:
+  credential: AI-103
+  target_date: 2026-12-15
+  hours_per_week: 8
+  preferred_resources:
+    - linkedin_learning
+    - nptel
+    - jfxlms_simulators
+```
 
-### LMS / Course Platforms
-- Frappe Learning
-- OpenOlat
-- Forma LMS
-- CourseLit
-- Sakai
-- Canvas
-- Odoo eLearning
+Output:
 
-### Content Authoring
-- eXeLearning
-- Adapt Framework
-- Presenton
-
-### STEM / Mathematics
-- GeoGebra
-- MathQuill
-- MathJax
-- Llemma
-- SwallowMath
-
-### Programming Education
-- Artemis
-- SwallowCode
-- Interactive OpenMP Programming
-
-### Learning Standards
-- SCORM
-- LTI
-- xAPI
+```text
+Week 1–2 Python / AI baseline
+Week 3–4 NPTEL ML
+Week 5 LinkedIn Azure AI
+Week 6–8 AI-103 Learn modules
+Week 9–10 JFXLMS agent labs
+Week 11 integrated scenario
+Week 12 practice + gap remediation
+```
 
 ---
 
-## 20. Assessment Model
+# 81. Route Optimization
 
-Recommended undergraduate weighting:
+The planner may optimize for:
 
-| Area | Weight |
-|---|---:|
-| Engineering coursework | 50% |
-| Projects and laboratories | 20% |
-| Leadership and management | 15% |
-| Physical / field training | 10% |
-| Ethics, law and professional responsibility | 5% |
-
-Postgraduate assessment should emphasize simulation, research, systems engineering, design reviews, verification evidence, reproducibility, and thesis/capstone work.
-
----
-
-## 21. Project-Based Learning
-
-Representative projects:
-
-- mobile communications and energy station;
-- critical-infrastructure digital twin;
-- robotic inspection platform;
-- renewable microgrid;
-- GIS disaster-response system;
-- autonomous research vessel;
-- amphibious mobility demonstrator;
-- AI engineering agent;
-- aerospace simulation platform;
-- energy-system digital twin.
+```text
+Time
+Cost
+Existing Skills
+Language
+Theory Depth
+Hands-On Practice
+Target Exam Date
+```
 
 ---
 
-## 22. Recommended Repository Structure
+# 82. Cost-Aware Learning
+
+Potential resource classes:
+
+```text
+Microsoft Learn
+→ generally self-paced learning resources
+
+NPTEL
+→ learning access + optional certification exam model
+
+LinkedIn Learning
+→ subscription/institutional access
+
+JFXLMS
+→ internal/open lab resources
+
+Microsoft Exam
+→ official exam fee where applicable
+```
+
+Actual prices should be retrieved from current provider pages and learner geography.
+
+---
+
+# 83. Language-Aware Route
+
+```text
+Learner Language
+      ↓
+Provider Resource Availability
+      ↓
+Preferred Course
+```
+
+The route can combine:
+
+```text
+Spanish LinkedIn content
++
+English NPTEL
++
+Spanish/English Microsoft Learn
+```
+
+---
+
+# 84. NPTEL Certificate Recording
+
+```yaml
+external_credential:
+  provider: nptel
+  course: Cloud Computing
+  institution: IIT Kharagpur
+  year: 2026
+  verified_by: learner_import_or_supported_verification
+  category: academic_course_certificate
+```
+
+Do not classify it as `microsoft_certification`.
+
+---
+
+# 85. LinkedIn Certificate Recording
+
+```yaml
+external_credential:
+  provider: linkedin_learning
+  title: Microsoft Azure AI Essentials Professional Certificate
+  category: professional_learning_certificate
+```
+
+Again, keep the issuer and credential class explicit.
+
+---
+
+# 86. Microsoft Certification Recording
+
+```yaml
+external_credential:
+  provider: microsoft
+  title: Azure AI Apps and Agents Developer Associate
+  exam: AI-103
+  category: microsoft_certification
+```
+
+Use supported verification or learner-supplied evidence; do not fabricate certification status.
+
+---
+
+# 87. Unified Credential Wallet
+
+```text
+JFXLMS Credential Wallet
+   ├── Microsoft Certifications
+   ├── Microsoft Applied Skills
+   ├── LinkedIn Learning Certificates
+   ├── NPTEL Certificates
+   ├── JFXLMS Lab Badges
+   └── Project Evidence
+```
+
+---
+
+# 88. Open Badges Extension
+
+JFXLMS can issue internal badges such as:
+
+```text
+Azure Network Simulation — Level 3
+Agentic Process Integration — Level 4
+Fabric Pipeline Simulation — Level 3
+OpenTwin Cloud Architecture — Level 4
+```
+
+Internal badges should never use Microsoft trademarks in a way that implies Microsoft endorsement.
+
+---
+
+# 89. Certification Path Dashboard
+
+```text
+┌──────────────────────────────────────────────────────┐
+│ AI-103 — Readiness                                  │
+├──────────────────────────────────────────────────────┤
+│ Microsoft objectives mapped:             92%        │
+│ LinkedIn learning completed:              80%        │
+│ NPTEL foundation completed:               75%        │
+│ Simulation labs passed:                 8 / 10       │
+│ Integrated scenarios passed:            2 / 3        │
+│ Current readiness estimate:               74%        │
+└──────────────────────────────────────────────────────┘
+```
+
+---
+
+# 90. Instructor Dashboard
+
+```text
+Learners by Certification
+Skill Gaps
+Lab Completion
+Simulator Failure Patterns
+Resource Effectiveness
+Practice Assessment Trends
+Credential Status Changes
+```
+
+---
+
+# 91. Certification Catalog Synchronization
+
+Suggested process:
+
+```text
+Scheduled Metadata Check
+      ↓
+Microsoft Credential Catalog
+      ↓
+Detect:
+New / Updated / Retiring / Retired
+      ↓
+Route Impact Analysis
+      ↓
+Instructor Review
+      ↓
+Update JFXLMS Paths
+```
+
+---
+
+# 92. LinkedIn Content Drift Check
+
+LinkedIn may retain courses for retired Microsoft exams.
+
+Therefore:
+
+```text
+LinkedIn Resource
+      ↓
+Target Exam Code
+      ↓
+Microsoft Registry
+      ↓
+Exam Active?
+   ├── Yes → active prep resource
+   └── No  → legacy/reference resource
+```
+
+---
+
+# 93. Example Legacy Handling — AI-900
+
+```text
+LinkedIn AI-900 Course
+       ↓
+Microsoft status:
+RETIRED
+       ↓
+JFXLMS Label:
+Legacy / Fundamentals Reference
+       ↓
+Map overlapping content to:
+AI-901
+```
+
+---
+
+# 94. Example Legacy Handling — AI-102
+
+```text
+LinkedIn AI-102 Prep
+       ↓
+Microsoft status:
+RETIRED
+       ↓
+Map transferable concepts
+       ↓
+Recommend current:
+AI-103
+```
+
+Do not call the old course current exam preparation.
+
+---
+
+# 95. Example Legacy Handling — PL-500
+
+```text
+PL-500
+RETIRED June 2026
+      ↓
+Keep RPA learning material as:
+Process Automation Reference
+```
+
+No longer expose it as an active certification target.
+
+---
+
+# 96. Recommended Certification Families in JFXLMS
+
+```text
+FOUNDATIONS
+AI-901
+PL-900
+
+CLOUD OPERATIONS
+AZ-104
+
+ARCHITECTURE
+AZ-305
+
+AI / AGENTS
+AI-103
+AB-620
+
+BUSINESS APPLICATION DEVELOPMENT
+PL-400
+
+DATA ENGINEERING
+DP-700
+
+ANALYTICS
+DP-600
+```
+
+---
+
+# 97. Cross-Certification Simulator
+
+One complex scenario can map to several credentials.
+
+Example:
+
+```text
+Smart Microfactory on Azure
+```
+
+Skills:
+
+```text
+AZ-104
+Infrastructure
+
+AZ-305
+Architecture
+
+DP-700
+Telemetry pipelines
+
+AI-103
+Predictive/agent intelligence
+
+PL-400
+Business workflow integration
+```
+
+---
+
+# 98. Capstone — OpenTwin Enterprise Lab
+
+```text
+Microfactory / Farm / Airline / Finance Scenario
+          ↓
+Azure Infrastructure
+          ↓
+Data Pipeline
+          ↓
+AI Agent
+          ↓
+Business Workflow
+          ↓
+Dashboard
+          ↓
+Security / Monitoring
+          ↓
+Architecture Review
+```
+
+---
+
+# 99. Capstone Evidence
+
+```text
+Architecture Diagram
+IaC / Configuration
+Data Pipeline
+Agent Design
+Process Model
+Monitoring Dashboard
+Incident Response
+Technical Report
+Reflection
+```
+
+---
+
+# 100. GitHub Portfolio Integration
+
+```text
+JFXLMS Capstone
+      ↓
+GitHub Repository
+      ↓
+Issues
+      ↓
+Pull Requests
+      ↓
+CI
+      ↓
+Artifact
+      ↓
+JFXLMS Evidence
+```
+
+This can reuse the official GitHub MCP architecture already proposed for JFXCMS.
+
+---
+
+# 101. LinkedIn Profile Integration
+
+Learners may choose to publish:
+
+- Microsoft certifications;
+- LinkedIn Learning certificates;
+- NPTEL certificates;
+- GitHub projects;
+- JFXLMS badges.
+
+The system should preserve issuer accuracy.
+
+---
+
+# 102. Professional Portfolio Model
+
+```text
+Certification
++
+Academic Course
++
+Simulation Evidence
++
+Project
++
+Contribution
+=
+Professional Skills Portfolio
+```
+
+---
+
+# 103. Recommended MVP
+
+Start with three current routes:
+
+```text
+AZ-104
+AI-103
+PL-900
+```
+
+Why:
+
+- cloud infrastructure;
+- AI/agents;
+- business-process platform;
+- broad relevance across JFXLMS simulators.
+
+---
+
+# 104. MVP Components
+
+```text
+Credential Registry
+Skill Graph
+Learning Resource Registry
+Simulator Registry
+Objective Mapping
+Readiness Score
+External Links
+Evidence Store
+```
+
+---
+
+# 105. MVP Simulators
+
+```text
+Azure Infrastructure Twin
+AI / Agent Lab
+Business Process Automation Lab
+```
+
+---
+
+# 106. MVP Learning Providers
+
+```text
+Microsoft Learn
+LinkedIn Learning
+NPTEL
+```
+
+---
+
+# 107. MVP Phase 2
+
+Add:
+
+```text
+AZ-305
+PL-400
+DP-700
+```
+
+and simulator federation with:
+
+```text
+JFXAI4BPM
+JFXOSMS
+JFXFMIS
+```
+
+---
+
+# 108. MVP Phase 3
+
+Add:
+
+```text
+AI-901
+AB-620
+DP-600
+```
+
+and portfolio capstones.
+
+---
+
+# 109. MVP Phase 4
+
+Add adaptive recommendations:
+
+```text
+Skill Gap
+      ↓
+Best Resource
+      ↓
+Best Lab
+      ↓
+Reassessment
+```
+
+---
+
+# 110. MVP Phase 5
+
+Add:
+
+```text
+Credential lifecycle monitoring
+LinkedIn legacy-course detection
+NPTEL session/year metadata
+Certification route migration
+```
+
+---
+
+# 111. Data Model
+
+Core entities:
+
+```text
+Learner
+Skill
+Competency
+Credential
+ExamObjective
+LearningResource
+Course
+Simulation
+Scenario
+Assessment
+Evidence
+Badge
+PortfolioArtifact
+```
+
+---
+
+# 112. Relationship Graph
+
+```text
+Credential REQUIRES Skill
+Course TEACHES Skill
+Lab PRACTICES Skill
+Scenario ASSESSES Skill
+Evidence SUPPORTS Competency
+CredentialStatus INVALIDATES OldRoute
+```
+
+---
+
+# 113. Knowledge Graph Example
+
+```text
+AI-103
+  ├── REQUIRES → Python
+  ├── REQUIRES → Generative AI
+  ├── REQUIRES → Agents
+  ├── SUPPORTED_BY → NPTEL LLM
+  ├── SUPPORTED_BY → LinkedIn Azure AI
+  └── PRACTICED_BY → JFXLMS AI103 Labs
+```
+
+---
+
+# 114. API Architecture
+
+```text
+GET /credentials
+GET /credentials/{code}
+
+GET /learning-resources
+GET /learning-paths/{credential}
+
+GET /simulators
+POST /simulation-runs
+
+GET /learners/{id}/skills
+GET /learners/{id}/readiness/{credential}
+
+POST /evidence
+POST /route/recommend
+```
+
+---
+
+# 115. MCP Tool Layer
+
+Potential JFXLMS MCP tools:
+
+```text
+find_learning_path
+get_current_credential
+check_credential_status
+recommend_course
+recommend_simulator
+start_simulation
+get_skill_gaps
+explain_exam_objective
+```
+
+---
+
+# 116. AI Tutor Tool Flow
+
+```text
+Learner:
+"What should I practice for AI-103?"
+
+AI Tutor
+    ↓
+check_credential_status
+    ↓
+get_skill_gaps
+    ↓
+recommend_course
+    ↓
+recommend_simulator
+    ↓
+Personalized Route
+```
+
+---
+
+# 117. Security
+
+Learning data may include:
+
+- identity;
+- progress;
+- assessment;
+- external certificates.
+
+Controls:
+
+```text
+OIDC
+RBAC
+Encryption
+Audit
+Consent
+Data Minimization
+Tenant Isolation
+```
+
+---
+
+# 118. External Account Boundary
+
+Microsoft, LinkedIn, and NPTEL accounts remain external.
+
+JFXLMS should not request or store user passwords for those services.
+
+Use:
+
+- official OAuth where supported;
+- links;
+- user-approved evidence import.
+
+---
+
+# 119. Assessment Privacy
+
+Do not publish:
+
+```text
+Failed Attempts
+Weak Skills
+Private Scores
+```
+
+to LinkedIn or GitHub unless the learner explicitly chooses to share them.
+
+---
+
+# 120. Accessibility
+
+Simulators should provide:
+
+- keyboard operation;
+- text alternatives;
+- captions;
+- screen-reader semantics;
+- adjustable timing;
+- non-color-only status signals.
+
+---
+
+# 121. Offline / Low-Bandwidth Route
+
+NPTEL and LinkedIn availability varies by network/account.
+
+JFXLMS should support:
+
+```text
+Local Course Metadata
+Local Simulators
+Downloadable Open Materials
+Deferred Sync
+```
+
+without copying restricted provider content.
+
+---
+
+# 122. Simulation Infrastructure
+
+```text
+JFXLMS
+   ↓
+Lab Scheduler
+   ↓
+Container / VM Sandbox
+   ↓
+Simulator
+   ↓
+Telemetry
+   ↓
+Evidence Store
+```
+
+---
+
+# 123. Sandbox Isolation
+
+Each learner lab should use:
+
+```text
+Ephemeral Environment
+Quota
+No Production Credentials
+Restricted Network
+Automatic Cleanup
+```
+
+---
+
+# 124. Azure Cost Simulation Mode
+
+Certification practice should not require large cloud bills.
+
+Provide:
+
+```text
+Synthetic Azure Resource Graph
+Cost Simulator
+Network Simulator
+Policy Simulator
+Failure Simulator
+```
+
+before optional real Azure labs.
+
+---
+
+# 125. Hybrid Lab Model
+
+```text
+Level 1
+Pure Simulation
+
+Level 2
+Local Containers
+
+Level 3
+Azure Sandbox / Free-tier-compatible resources
+
+Level 4
+Real Enterprise-like Capstone
+```
+
+---
+
+# 126. NPTEL + Simulation Pedagogy
+
+```text
+NPTEL Theory
+      ↓
+Concept Check
+      ↓
+JFXLMS Simulation
+      ↓
+Failure Scenario
+      ↓
+Reflection
+```
+
+---
+
+# 127. LinkedIn + Simulation Pedagogy
+
+```text
+LinkedIn Demonstration
+      ↓
+Guided Lab
+      ↓
+Independent Scenario
+      ↓
+Portfolio Artifact
+```
+
+---
+
+# 128. Microsoft Learn + Simulation Pedagogy
+
+```text
+Official Objective
+      ↓
+Official Learning Path
+      ↓
+JFXLMS Skill Mapping
+      ↓
+Scenario
+      ↓
+Readiness Evidence
+```
+
+---
+
+# 129. Recommended 2026 Learning Matrix
+
+| Microsoft Route | LinkedIn Learning | NPTEL | JFXLMS Simulator |
+|---|---|---|---|
+| AI-901 | Azure AI Essentials / current AI material | Intro ML, AI reasoning, Python | AI Fundamentals Twin |
+| AI-103 | Azure AI / agent learning | ML, Deep Learning, LLMs, GenAI Vision | Agent + RAG Lab |
+| AB-620 | AI / Copilot/Power Platform learning | AI reasoning, LLMs | Multi-Agent Process Twin |
+| PL-900 | PL-900 Cert Prep | Software design / business-supporting study | Process Automation Lab |
+| PL-400 | PL-400 Cert Prep | Software Conceptual Design | Integration / Connector Lab |
+| AZ-104 | AZ-104 Cert Prep | Cloud Computing, Distributed Systems, Edge | Azure Infrastructure Twin |
+| AZ-305 | AZ-305 Cert Prep | Cloud + Distributed Systems + Software Design | Architecture Scenario Twin |
+| DP-700 | DP-700 Cert Prep | Python Data Science, Cloud | Data Pipeline Twin |
+| DP-600 | Fabric / analytics content | Data Science / Analytics | Analytics Semantic Model Lab |
+
+---
+
+# 130. Important Currency Note
+
+The certification catalog is time-sensitive.
+
+As of September 2026:
+
+- AI-900 is retired; AI-901 is the current Azure AI Fundamentals exam.
+- AI-102 is retired; AI-103 is the current Azure AI apps/agents associate route.
+- PL-500 is retired.
+- PL-200 retired at the end of August 2026.
+- AZ-500 retired at the end of August 2026.
+- PL-400 remains active, while Microsoft has announced an updated AB-400 exam for October 2026.
+
+JFXLMS should verify these statuses automatically before displaying route recommendations.
+
+---
+
+# 131. Source Authority Model
+
+```text
+Microsoft Learn
+→ authority for Microsoft credential status and objectives
+
+LinkedIn Learning
+→ authority for LinkedIn course availability/content metadata
+
+NPTEL / SWAYAM
+→ authority for NPTEL course sessions and certificates
+
+JFXLMS
+→ authority for internal labs, skills evidence and recommendations
+```
+
+---
+
+# 132. No False Equivalence
+
+Never display:
+
+```text
+NPTEL Cloud Computing
+= AZ-104
+```
+
+or:
+
+```text
+LinkedIn Azure AI Essentials
+= AI-901
+```
+
+Instead:
+
+```text
+NPTEL / LinkedIn Resource
+SUPPORTS PREPARATION FOR
+Microsoft Skill Objective
+```
+
+---
+
+# 133. MBSE → CAD → CAM → CAS Integration
+
+```text
+MBSE
+Certification ecosystem
+Skill architecture
+Provider boundaries
+      ↓
+CAD
+Learning paths
+Competency graph
+Scenario design
+      ↓
+CAM
+LMS integration
+Sandbox deployment
+Provider adapters
+      ↓
+CAS
+Simulated labs
+Failure scenarios
+Readiness assessment
+      ↓
+Professional Certification Preparation
+```
+
+---
+
+# 134. OpenTwin Learning Architecture
+
+```text
+                    LEARNER
+                       │
+                       ▼
+                  JFXLMS PORTAL
+                       │
+        ┌──────────────┼───────────────┐
+        ▼              ▼               ▼
+ Microsoft Learn  LinkedIn Learning   NPTEL
+        │              │               │
+        └──────────────┼───────────────┘
+                       ▼
+                   SKILL GRAPH
+                       │
+                       ▼
+              OPENTWIN LAB GATEWAY
+                       │
+  ┌──────────┬─────────┼──────────┬───────────┐
+  ▼          ▼         ▼          ▼           ▼
+ Cloud      AI       Process     Data       Domain
+ Twin       Twin      Twin       Twin        Twins
+  │          │         │          │           │
+  └──────────┴─────────┼──────────┴───────────┘
+                       ▼
+                SKILL EVIDENCE
+                       │
+                       ▼
+                READINESS MODEL
+                       │
+                       ▼
+          OFFICIAL MICROSOFT EXAM PATH
+```
+
+---
+
+# 135. Recommended Repository Extension
 
 ```text
 jfxlms/
 ├── README.md
-├── docs/
-│   ├── curriculum/
-│   │   ├── undergraduate/
-│   │   └── postgraduate/
-│   ├── pedagogy/
-│   ├── assessment/
-│   └── accreditation/
-├── courses/
-│   ├── military-engineering/
-│   ├── naval/
-│   ├── nuclear-energy/
-│   ├── artificial-intelligence/
-│   ├── aerospace/
-│   └── health-sciences/
-├── training/
-│   ├── amphibious-aviation-special-operations/
-│   ├── search-and-rescue/
-│   ├── geospatial/
-│   ├── unmanned-systems/
-│   └── xr-human-augmentation/
-├── labs/
-│   ├── mbse/
-│   ├── digital-twin/
-│   ├── robotics/
-│   ├── energy/
-│   ├── naval/
-│   ├── aerospace/
-│   ├── biomedical/
-│   └── xr-haptics-exoskeleton/
-├── opentwin/
-│   ├── learner/
-│   ├── course/
-│   ├── skill/
-│   ├── lab/
-│   └── project/
-├── rag/
-├── ai-tutor/
-├── assessments/
-├── analytics/
+│
+├── certification/
+│   ├── microsoft/
+│   │   ├── registry/
+│   │   ├── objectives/
+│   │   └── lifecycle/
+│   ├── linkedin/
+│   │   └── resources/
+│   └── nptel/
+│       └── resources/
+│
+├── skills/
+│   ├── graph/
+│   ├── mappings/
+│   └── evidence/
+│
+├── simulators/
+│   ├── azure/
+│   ├── ai/
+│   ├── agents/
+│   ├── power-platform/
+│   ├── fabric/
+│   └── federation/
+│
 ├── integrations/
-├── MBSE/
-│   ├── CAD/
-│   ├── CAM/
-│   └── CAS/
-└── examples/
+│   ├── microsoft-learn/
+│   ├── linkedin-learning/
+│   ├── nptel/
+│   ├── github/
+│   └── xapi/
+│
+├── learning-paths/
+│   ├── AI-901.yaml
+│   ├── AI-103.yaml
+│   ├── AB-620.yaml
+│   ├── PL-900.yaml
+│   ├── PL-400.yaml
+│   ├── AZ-104.yaml
+│   ├── AZ-305.yaml
+│   ├── DP-700.yaml
+│   └── DP-600.yaml
+│
+└── tests/
+    ├── credential-status/
+    ├── skill-mapping/
+    ├── simulations/
+    ├── evidence/
+    └── privacy/
 ```
 
 ---
 
-## 23. Development Roadmap
+# 136. Strategic Recommendation
 
-### Phase 1 — Curriculum Model
-- Undergraduate curriculum schema
-- Postgraduate specialization schema
-- Competency taxonomy
-- Prerequisites and outcomes
+The most useful architecture is not a static catalogue of courses.
 
-### Phase 2 — LMS Core
-- Learner registry
-- Courses
-- Assignments
-- Assessments
-- Certifications
-- Analytics
-
-### Phase 3 — Collaboration
-- Video conferencing
-- Whiteboard
-- Group projects
-- Instructor workflows
-
-### Phase 4 — AI Tutor
-- RAG
-- Course-aware tutoring
-- Adaptive recommendations
-- Engineering-document retrieval
-
-### Phase 5 — Engineering Laboratories
-- MBSE
-- CAD
-- Simulation
-- Modelica
-- ROS 2
-- HPC
-- Digital twins
-
-### Phase 6 — Learning Digital Twins
-- Learner Twin
-- Skill Twin
-- Course Twin
-- Lab Twin
-- Project Twin
-
-### Phase 7 — Advanced Programs
-- Naval Systems Engineering
-- Nuclear Energy Systems Engineering
-- AI & Autonomous Systems
-- Aerospace Systems Engineering
-
-### Phase 8 — Multidomain Capstone
-- OpenTwin engineering laboratory
-- Cross-domain projects
-- V&V
-- Research publications
-- Professional portfolio
-
----
-
-
-## 24. Health Sciences & Biomedical Education Branch
-
-JFXLMS can also support a parallel **Health Sciences and Biomedical Engineering academic branch**.
-
-This branch is structurally different from the two-year engineering postgraduate tracks. Human Medicine and Stomatology normally require full professional-degree pathways, while Pediatric & Adolescent Gynecology is appropriately treated as an advanced medical subspecialty after medical training and specialization in Obstetrics and Gynecology.
+JFXLMS should implement:
 
 ```text
-                     JFXLMS
-                       |
-          +------------+------------+
-          |                         |
-          v                         v
-  Engineering Branch       Health Sciences Branch
-          |                         |
-          |              +----------+----------+
-          |              |          |          |
-          |              v          v          v
-          |         Human Medicine  Stomatology  Biomedical
-          |                                   Engineering
-          |                         |
-          |                         v
-          |              Clinical Specialization
-          |                         |
-          |                         v
-          |            Obstetrics & Gynecology
-          |                         |
-          |                         v
-          |      Pediatric & Adolescent Gynecology
-          |
-          +-------------------------+
-                    |
-                    v
-          OpenTwin Biomedical Lab
+CURRENT CERTIFICATION REGISTRY
+        +
+SKILL GRAPH
+        +
+LINKEDIN LEARNING PREP
+        +
+NPTEL ACADEMIC FOUNDATION
+        +
+OPENTWIN SIMULATION LABS
+        +
+PROJECT EVIDENCE
+        +
+READINESS ASSESSMENT
 ```
 
-### 22.1 Human Medicine
-
-The Human Medicine pathway can be represented in JFXLMS as a professional medical curriculum with preclinical, clinical, simulation, research, and supervised practice components.
-
-#### Foundational Sciences
-
-- Human Anatomy
-- Histology
-- Embryology
-- Physiology
-- Biochemistry
-- Molecular Biology
-- Genetics
-- Immunology
-- Microbiology
-- Pathology
-- Pharmacology
-- Epidemiology
-- Biostatistics
-- Medical Ethics
-
-#### Clinical Sciences
-
-- Internal Medicine
-- General Surgery
-- Pediatrics
-- Obstetrics and Gynecology
-- Psychiatry
-- Emergency Medicine
-- Family and Community Medicine
-- Infectious Diseases
-- Neurology
-- Cardiology
-- Pulmonology
-- Gastroenterology
-- Nephrology
-- Endocrinology
-- Dermatology
-- Radiology and Medical Imaging
-
-#### Digital Medicine Integration
-
-- Electronic Health Records
-- Clinical Decision Support
-- Medical AI
-- Medical Imaging AI
-- Biomedical Signal Processing
-- Telemedicine
-- Medical Data Engineering
-- Clinical NLP
-- Digital Twins for physiological and care-process modeling
-- Healthcare interoperability standards
+This gives the learner three complementary forms of preparation:
 
 ```text
-Biomedical Sciences
-        |
-Preclinical Medicine
-        |
-Clinical Simulation
-        |
-Supervised Clinical Training
-        |
-Digital Medicine / AI
-        |
-Research & Evidence-Based Medicine
+THEORY
+NPTEL
+
+GUIDED PROFESSIONAL LEARNING
+LinkedIn Learning
+
+APPLIED PRACTICE
+JFXLMS / OpenTwin Simulators
 ```
+
+all mapped against the **current Microsoft Learn credential objectives**.
 
 ---
 
-### 22.2 Stomatology / Dentistry
+# 137. Recommended First Production Path
 
-The Stomatology branch can integrate foundational biomedical sciences with oral-health sciences, dental simulation, imaging, biomaterials, and supervised clinical education.
-
-#### Core Areas
-
-- Head and Neck Anatomy
-- Oral Histology and Embryology
-- Oral Physiology
-- Dental Materials
-- Oral Pathology
-- Oral Microbiology
-- Preventive Dentistry
-- Operative Dentistry
-- Periodontology
-- Endodontics
-- Prosthodontics
-- Orthodontics
-- Pediatric Dentistry
-- Oral and Maxillofacial Surgery
-- Oral Radiology
-- Community Dentistry
-
-#### Digital Dentistry
-
-- Intraoral Scanning
-- Dental CAD/CAM
-- 3D Reconstruction
-- Dental Imaging AI
-- Digital Occlusion Analysis
-- Additive Manufacturing
-- Dental Biomaterials
-- Patient-specific digital models
-- Clinical simulation
+Start with:
 
 ```text
-Oral Sciences
-     |
-Clinical Dentistry
-     |
-Digital Imaging
-     |
-CAD / CAM
-     |
-Patient-Specific Models
-     |
-Simulation / Treatment Planning
+Cloud Foundation
+NPTEL Cloud Computing
+      ↓
+LinkedIn AZ-104 Preparation
+      ↓
+JFXLMS Azure Infrastructure Twin
+      ↓
+Microsoft Learn AZ-104
+      ↓
+AZ-104
+      ↓
+LinkedIn AZ-305 Preparation
+      ↓
+JFXLMS Architecture Twin
+      ↓
+Microsoft Learn AZ-305
 ```
+
+This path directly supports JFXLMS cloud, simulation, digital-twin, container, networking, and architecture objectives.
 
 ---
 
-### 22.3 Biomedical Engineering
-
-Biomedical Engineering provides a direct bridge between the existing engineering architecture of JFXLMS and the new Health Sciences branch.
-
-#### Core Modules
-
-- Biomedical Instrumentation
-- Biomedical Electronics
-- Biosensors
-- Biomedical Signal Processing
-- Medical Imaging
-- Biomechanics
-- Biomaterials
-- Rehabilitation Engineering
-- Prosthetics and Orthotics
-- Clinical Engineering
-- Medical Device Software
-- Human-Machine Interfaces
-- Robotics in Medicine
-- Medical IoT
-- Healthcare Cybersecurity
-- Physiological Modeling
-- AI for Biomedical Systems
-- Digital Twins in Healthcare
-- Regulatory and Quality Engineering
-
-#### Engineering Toolchain
+# 138. Recommended AI Production Path
 
 ```text
-Requirements
-    |
-MBSE / Systems Engineering
-    |
-Biomedical Modeling
-    |
-Electronics / Sensors
-    |
-Software / AI
-    |
-Simulation
-    |
-Prototype
-    |
-Verification & Validation
-    |
-Clinical / Regulatory Evaluation
+NPTEL Python for Data Science
+      ↓
+NPTEL Introduction to Machine Learning
+      ↓
+NPTEL Introduction to LLMs
+      ↓
+LinkedIn Microsoft Azure AI Essentials
+      ↓
+JFXLMS AI / Agent Labs
+      ↓
+AI-901
+      ↓
+AI-103
+      ↓
+AB-620
 ```
 
-#### Example Capstone
+Learners may skip AI-901 where their competency evidence is already strong; Microsoft does not require AI-901 as a prerequisite for AI-103.
 
-**OpenTwin Biomedical Monitoring Platform**
+---
+
+# 139. Recommended Business Automation Path
 
 ```text
-Sensors
-   |
-Biomedical Signals
-   |
-Edge Processing
-   |
-AI Analysis
-   |
-Patient / Device Twin
-   |
-Clinical Dashboard
-   |
-Human Review
+Business Process Fundamentals
+      ↓
+LinkedIn PL-900 Cert Prep
+      ↓
+JFXAI4BPM Simulation
+      ↓
+PL-900
+      ↓
+LinkedIn PL-400 Cert Prep
+      ↓
+JFXLMS Connector / Workflow Labs
+      ↓
+PL-400
+      ↓
+Agentic Process Labs
+      ↓
+AB-620
 ```
 
 ---
 
-### 22.4 Pediatric & Adolescent Gynecology
+# 140. Final Design Principle
 
-Pediatric & Adolescent Gynecology should be modeled as an **advanced clinical subspecialty**, not as an entry-level standalone degree.
-
-Recommended pathway:
-
-```text
-Human Medicine
-      |
-Medical Licensure / Internship
-      |
-Obstetrics & Gynecology Specialization
-      |
-Pediatric & Adolescent Gynecology
-```
-
-#### Academic Scope
-
-- Developmental anatomy and physiology
-- Embryology of the reproductive system
-- Pubertal development
-- Menstrual health
-- Congenital reproductive-tract anomalies
-- Pediatric and adolescent endocrine disorders
-- Adolescent reproductive health
-- Gynecologic infections in pediatric/adolescent care
-- Benign gynecologic conditions
-- Pediatric pelvic imaging
-- Clinical communication with minors and families
-- Trauma-informed care
-- Safeguarding and mandatory-reporting principles
-- Ethics, consent and assent
-- Multidisciplinary care
-- Evidence-based clinical practice
-
-#### Clinical Simulation and Digital Education
-
-JFXLMS can support:
-
-- case-based learning;
-- virtual standardized-patient scenarios;
-- clinical decision-support exercises;
-- anatomy and physiology diagrams;
-- ultrasound and imaging interpretation exercises;
-- differential-diagnosis training;
-- safeguarding scenarios;
-- communication and consent simulations;
-- supervised assessment rubrics.
-
-Any educational material involving minors should remain strictly clinical, age-appropriate, non-sexualized, privacy-preserving, and suitable for professional medical education.
+> **Microsoft Learn defines the certification target; LinkedIn Learning accelerates professional preparation; NPTEL strengthens academic foundations; and JFXLMS/OpenTwin simulators provide applied evidence through realistic, reproducible scenarios.**
 
 ---
 
-### 22.5 OpenTwin Biomedical & Clinical Learning Laboratory
+# 141. Current Reference Sources
 
-The Health Sciences branch can share a common OpenTwin laboratory.
+## JFXLMS
 
-```text
-                  OPENTWIN HEALTH LAB
-                          |
-       +------------------+------------------+
-       |                  |                  |
-       v                  v                  v
- Physiological Twin   Medical Device Twin   Care Process Twin
-       |                  |                  |
-       +------------------+------------------+
-                          |
-                          v
-                 Biomedical Data Layer
-                          |
-               AI / Simulation / Analytics
-                          |
-              Clinical Education Dashboard
-                          |
-                    Human Review
-```
+- https://github.com/robotics-intelligent-systems/jfxlms
 
-Potential laboratory domains:
+## Microsoft Learn
 
-- physiological modeling;
-- biomedical signal simulation;
-- medical-device digital twins;
-- dental CAD/CAM;
-- medical imaging;
-- healthcare interoperability;
-- clinical workflow simulation;
-- telemedicine;
-- biomedical AI;
-- healthcare cybersecurity.
+- https://learn.microsoft.com/credentials/
+- https://learn.microsoft.com/credentials/browse/
 
----
+Current routes referenced in this architecture:
 
-### 22.6 Health Sciences Learning Digital Twins
+- AI-901 — Azure AI Fundamentals
+- AI-103 — Azure AI Apps and Agents Developer Associate
+- AB-620 — AI Agent Builder Associate
+- AZ-104 — Azure Administrator Associate
+- AZ-305 — Azure Solutions Architect Expert
+- PL-900 — Power Platform Fundamentals
+- PL-400 — Power Platform Developer Associate
+- DP-700 — Fabric Data Engineer Associate
+- DP-600 — Fabric Analytics Engineer Associate
 
-Additional twin types can include:
+## LinkedIn Learning
 
-- **Patient Simulation Twin** — synthetic/educational physiological state for training.
-- **Medical Device Twin** — device configuration, performance, maintenance, and test history.
-- **Clinical Skill Twin** — learner competence mapped to supervised clinical evidence.
-- **Dental Model Twin** — educational oral/dental model, imaging, and treatment-planning artifacts.
-- **Clinical Scenario Twin** — case state, decisions, interventions, outcomes, and assessment evidence.
+- Microsoft Azure Essentials Professional Certificate
+- Microsoft Azure AI Essentials Professional Certificate
+- AZ-104 certification preparation
+- AZ-305 certification preparation
+- PL-900 certification preparation
+- PL-400 certification preparation
+- DP-700 certification preparation
 
-Real patient data should only be used under applicable privacy, consent, institutional, and regulatory controls.
+## NPTEL / SWAYAM
+
+Relevant 2026 courses include:
+
+- Cloud Computing — IIT Kharagpur
+- Cloud Computing and Distributed Systems — IIT Patna
+- Edge Computing — IIT Kanpur
+- Python for Data Science — IIT Madras
+- Introduction to Machine Learning — IIT Madras
+- Deep Learning — IIT Kharagpur
+- Introduction to Large Language Models — IIT Delhi / IIT Bombay
+- Artificial Intelligence: Knowledge Representation and Reasoning — IIT Madras
+- Generative AI for Computer Vision — IIT Guwahati
+- Software Conceptual Design — IIT Bombay
+- Advanced Financial Analytics — IIT Kanpur
 
 ---
 
-### 22.7 Health Sciences Academic Governance
+# 142. Disclaimer
 
-JFXLMS should distinguish clearly between:
+This document is an integration architecture proposal.
 
-- educational simulation;
-- supervised clinical education;
-- professional certification;
-- licensure;
-- clinical decision support;
-- actual patient care.
+Microsoft certifications, exam codes, retirement dates, LinkedIn Learning courses, and NPTEL/SWAYAM sessions can change.
 
-The platform must not represent completion of an LMS course as equivalent to medical licensure or specialist certification.
+Before recommending or scheduling an exam, JFXLMS should verify:
 
-Human Medicine, Stomatology, and clinical specialties require institution-specific accreditation, supervised clinical practice, and compliance with applicable professional and healthcare regulations.
+- current Microsoft credential status;
+- official exam requirements;
+- prerequisites;
+- exam language availability;
+- provider access;
+- current LinkedIn Learning course metadata;
+- current NPTEL/SWAYAM course session;
+- certificate/exam availability.
 
----
-
-
-## 25. Safety, Ethics and Responsible Engineering
-
-The program emphasizes public safety, engineering ethics, humanitarian applications, infrastructure resilience, environmental responsibility, cybersecurity, responsible AI, nuclear safety, verification and validation, and human oversight.
-
-The Military Engineering curriculum focuses on engineering education, infrastructure, logistics, communications, emergency response, simulation, energy, mobility, and systems engineering.
-
-The nuclear specialization is restricted to civilian nuclear-energy systems, safety, instrumentation, radiation protection, simulation, and lifecycle engineering.
-
----
-
-## 26. Strategic Vision
-
-```text
-EDUCATION
-   |
-LMS + AI Tutor
-   |
-STEM + Engineering Labs
-   |
-MBSE + Digital Twins
-   |
-+----------+----------+----------+----------+
-|          |          |          |          |
-Military   Naval    Nuclear      AI     Aerospace
-Engineering Systems  Energy  Autonomous  Systems
-                     Systems   Systems
-
-Health Sciences: Human Medicine | Stomatology | Biomedical Engineering
-                              |
-              Pediatric & Adolescent Gynecology
-|          |          |          |          |
-+----------+----------+----------+----------+
-                    |
-                    v
-        MULTIDOMAIN ENGINEERING
-                    |
-                    v
-             Research & Innovation
-```
-
-Guiding principle:
-
-> **Learn → Model → Simulate → Build → Verify → Improve**
-
----
-
-## 27. Intellectual Property and Open Design
-
-The project should favor open educational resources, open standards, modular integrations, documented interfaces, independently replaceable software components, reproducible laboratories, portable course content, and open engineering formats where practical.
-
-Open-source licensing does not itself guarantee freedom from third-party patent, copyright, trademark, standards-essential patent, or other intellectual-property rights. Appropriate review remains necessary.
-
----
-
-## 28. Disclaimer
-
-JFXLMS and the curriculum described in this document are research, educational, and engineering concepts.
-
-They do not by themselves constitute accredited university programs, military certification, professional engineering licensure, nuclear operator qualification, naval certification, aerospace certification, or safety-critical operational authorization.
-
-Real-world educational accreditation and engineering practice require compliance with applicable institutional, professional, safety, and jurisdiction-specific requirements.
-
----
-
-## 29. Conclusion
-
-JFXLMS becomes more than a traditional LMS: it becomes an **AI-assisted digital engineering education platform**.
-
-```text
-5-Year Military Engineering Program
-              +
-2-Year Advanced Engineering Postgraduate Program
-              |
-    +---------+---------+---------+---------+
-    |         |         |         |         |
-  Naval    Nuclear     AI     Aerospace  Multidomain
-              |
-              v
-        OpenTwin Laboratory
-              |
-      Digital Engineering
-              |
-      Research & Innovation
-```
-
-This architecture combines education, AI, simulation, digital twins, MBSE, and advanced engineering into a single open and modular learning ecosystem.
+JFXLMS simulation completion is educational evidence only and does not grant a Microsoft certification.
