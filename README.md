@@ -14,6 +14,271 @@
   </em>
 </p>
 
+# JFXLMS — OpenTwin AI Learning Integration Architecture
+
+An open-source-first architecture for adaptive learning, collaborative classrooms, STEM authoring, programming assessment and simulation-based skill evidence. This extension connects the categorized software compendium to the existing OpenTwin laboratories, learner skill model and professional-certification proposal below.
+
+**Status:** proposed architecture and dependency catalog; no new integrations are implemented by this documentation change. Source review: 2026-09-20. Native API, LTI, SCORM, identity and event support must be verified for each selected release. Listing a project does not establish interoperability, production readiness or a common license.
+
+**Navigation:** [Integration architecture](#integration-architecture) · [Categorized compendium](#categorized-compendium) · [AI and digital twins](#ai-and-learning-digital-twins) · [Delivery roadmap](#delivery-roadmap-and-acceptance) · [Existing certification architecture](#microsoft-certification-linkedin-learning--nptel-simulation-integration-architecture)
+
+## Integration architecture
+
+Choose **one authoritative LMS per deployment**. Other LMS products are alternative backends or explicitly scoped federation peers, not simultaneous masters of enrollment, grades and completion. JFXLMS supplies the integration gateway, learning-resource registry, AI orchestration and OpenTwin evidence model.
+
+```mermaid
+flowchart TD
+  A["Learner and instructor portal"] --> B["JFXLMS integration gateway"]
+  B --> C["Primary LMS"]
+  B --> D["Classroom and authoring tools"]
+  B --> E["Assessment and OpenTwin labs"]
+  C --> F["Validated learning evidence"]
+  D --> F
+  E --> F
+  F --> G["Skill graph and learner twin"]
+  B --> H["AI tutor gateway"]
+  I["Approved course sources"] --> H
+  G --> H
+  H --> J["Hints and draft recommendations"]
+  J --> A
+  G --> K["Credential preparation mapping"]
+```
+
+| Layer | Responsibility | Candidate integration |
+|---|---|---|
+| Experience | Course navigation, accessible activities, instructor review | JFXLMS portal; optional Liferay portal shell |
+| Identity and authorization | Tenant, course membership, learner/instructor roles | Existing identity provider and qualified per-product SSO adapters |
+| LMS system of record | Enrollment, course versions, gradebook and completion | Frappe Learning, OpenOlat, Forma LMS, CourseLit, Sakai, Canvas or Odoo eLearning |
+| Learning resources | Draft/review/publish lifecycle and reusable assets | eXeLearning 3, Adapt, OCW Management System, Presenton, ocp-reveal |
+| Live classroom | Sessions, participant permissions, recording references | BigBlueButton or a custom OpenVidu application |
+| Spatial and mathematical interaction | Annotations, equation input, rendering and interactive exercises | PenEcho, OpenBoard, MathQuill, MathJax; qualified GeoGebra deployment |
+| Assessment and labs | Reproducible exercises, feedback and simulation evidence | Artemis, Interactive OpenMP Programming, existing OpenTwin lab gateway |
+| AI services | Retrieval, tutoring, hints, authoring assistance and model routing | OpenTutor adapter, optional mathematics model such as Llemma, qualified datasets |
+| Evidence and analytics | Validated events, provenance, learner-visible progress | Proposed evidence service, skill graph and learner twin |
+| Professional pathways | Provider metadata and objective mapping | Existing Microsoft Learn, LinkedIn Learning and NPTEL proposal |
+
+Keep application databases separate. Exchange stable identifiers and versioned API/event contracts instead of cross-writing product tables. Course ownership, authoritative grades and conflict resolution must be defined before enabling bidirectional synchronization.
+
+### Interoperability boundaries
+
+| Mechanism | Proposed use | Boundary and verification |
+|---|---|---|
+| LTI 1.3 | Launch external learning tools with scoped course/user context | Verify both platform and tool profiles, registration, deployment IDs and authentication; optional Advantage services need separate capability checks |
+| SCORM | Run packaged learning activities against a compatible LMS runtime | Distinguish SCORM 1.2 and 2004; verify completion, score, resume and commit behavior |
+| xAPI | Send validated learning-activity statements to a selected LRS | Select the version and vocabulary; internal events require mapping and validation |
+| Product APIs | Enrollment metadata, course assets, session creation, assessment exchange | Use documented endpoints, supported editions and least-privilege credentials |
+| Files and exports | Slides, board snapshots, authoring sources and migration outputs | Preserve format/version, source license, checksums and loss reports |
+| MCP | Bounded AI access to approved resources, boards and lab metadata | MCP is not an LMS interoperability or identity standard; authorize every tool operation |
+| Webhooks/events | Asynchronous evidence and progress updates | Signed or authenticated delivery, event IDs, replay protection, retries and deduplication |
+
+[LTI 1.3 specification](https://www.imsglobal.org/spec/lti/v1p3/) and [xAPI specification repository](https://github.com/adlnet/xAPI-Spec) are reference sources for the selected adapters. Standards support is a per-product, per-version qualification item; this proposal does not claim universal conformance.
+
+The simplified xAPI-like JSON in the earlier certification section illustrates domain intent, not a conformant wire statement. The adapter must emit the complete required actor, verb and object structures and validate them against the selected xAPI version.
+
+## Categorized compendium
+
+The tables distinguish proposed JFXLMS roles from upstream capabilities. Linked repositories and documentation are source references. Pin a release/commit and inspect its actual license and dependencies before implementation.
+
+### 1. LMS backends and enterprise learning portals
+
+| Project and source | Proposed role | Integration boundary |
+|---|---|---|
+| [Frappe Learning](https://github.com/frappe/lms) | Course, chapter, lesson, quiz and assignment backend for a compact deployment | Qualify Frappe framework dependencies and supported APIs; a documented Zoom feature does not imply a built-in BigBlueButton adapter |
+| [OpenOlat](https://github.com/OpenOLAT/OpenOLAT) | Institutional courses, assessment and communication | Verify release-specific identity, content and external-tool support |
+| [Forma LMS](https://github.com/formalms/formalms) | Organizational training and course administration alternative | Pin compatible PHP/database versions and qualify course/reporting interfaces |
+| [CourseLit](https://github.com/codelitdev/courselit) / [product documentation entry](https://courselit.app/) | Course publishing, memberships and optional learning commerce | Distinguish self-hosted features from hosted-plan capabilities; check API/SSO availability for the chosen deployment |
+| [Sakai](https://github.com/sakaiproject/sakai) | Institutional teaching, research and collaboration backend | Pin a supported release rather than copying historical quick-start runtime versions |
+| [Canvas LMS](https://github.com/instructure/canvas-lms) | Course delivery and gradebook backend | AGPLv3 upstream source; hosted services and external integrations have separate configuration/terms |
+| [Odoo eLearning](https://github.com/odoo/odoo/tree/master/addons/website_slides) | Learning connected to an Odoo business environment | Qualify the website_slides module, dependencies and Community/Enterprise boundary of any added modules |
+| [Liferay Portal / DXP source](https://github.com/liferay/liferay-portal) | Optional portal and enterprise navigation shell | Not the authoritative gradebook by default; use the applicable open-source licensing option and verify module terms in [LICENSING.md](https://github.com/liferay/liferay-portal/blob/master/LICENSING.md) |
+
+Select a backend through a small compatibility exercise covering course creation, enrollment, an external activity, score persistence and learner export. Do not install all seven LMS backends merely to cover the catalog.
+
+### 2. Live classrooms and collaborative workspaces
+
+| Project and source | Proposed role | Integration boundary |
+|---|---|---|
+| [BigBlueButton](https://github.com/bigbluebutton/bigbluebutton) | Teacher-led virtual classroom with audio/video, presentation, whiteboard and breakout workflows | Session creation/join and recording references through a server-side adapter; attendance is not proof of mastery |
+| [OpenVidu](https://github.com/openvidu/openvidu) | WebRTC foundation for custom tutoring and collaboration applications | Alternative to a ready-made classroom; qualify the selected release architecture, edition, recording, TURN and infrastructure requirements |
+| [PenEcho](https://github.com/penecho/penecho) | Shared spatial context combining handwriting, diagrams, equations and AI conversation | Use supported MCP/asset interfaces after capability checks; retained board snapshots and AI-readable annotations need course access controls |
+| [OpenBoard](https://github.com/OpenBoard-org/OpenBoard) | Desktop interactive whiteboard for instructor work and classroom assets | Start with exported artifacts or screen sharing; do not assume a native multi-user web API |
+
+Recordings, transcripts, board captures and chat are separate data classes with explicit retention and sharing controls. An opted-in transcript can become a reviewed course resource; ingestion into RAG or model training is not automatic.
+
+### 3. Authoring, open courseware and presentation generation
+
+| Project and source | Proposed role | Integration boundary |
+|---|---|---|
+| [eXeLearning 3](https://github.com/exelearning/exelearning) | Create and publish reusable educational resources | AGPLv3 tool; verify export formats for the selected version and retain editable sources alongside published packages |
+| [Adapt framework](https://github.com/adaptlearning/adapt_framework) | Responsive HTML5 learning modules | Framework and authoring tool are distinct components; plugins and tracking support require compatibility checks |
+| [OCW Management System](https://github.com/SumonMSelim/ocwms) | Course-material, assignment and faculty/student workflow reference | Candidate identified by the supplied description; qualify API/export support and individual course-content rights |
+| [Presenton](https://github.com/presenton/presenton) | AI-assisted presentation drafts and exports | Teacher reviews facts, citations, mathematical notation, images and accessibility before publication; hosted or local model choice is deployment-specific |
+| [ocp-reveal](https://github.com/OCamlPro/ocp-reveal) | OCaml-generated reveal.js HTML presentations | Qualify OCaml/dune/js_of_ocaml dependencies and browser compatibility; not a course player or grading service |
+
+Use a content lifecycle of draft, reviewed, published, superseded and withdrawn. Store the source artifact, exported artifact, content version, license, reviewer and competency tags. AI-generated content remains a draft until reviewed.
+
+### 4. Mathematics interfaces and STEM representations
+
+| Project and source | Proposed role | Integration boundary |
+|---|---|---|
+| [GeoGebra](https://github.com/geogebra/geogebra) | Interactive geometry, algebra, statistics and calculus exercises | Assess the exact component and distribution under the [official license terms](https://www.geogebra.org/license); source code and bundled product materials have different terms |
+| [MathQuill](https://github.com/mathquill/mathquill) | Structured browser formula entry | Preserve editable expressions and a keyboard/text alternative; not a symbolic solver |
+| [MathJax](https://github.com/mathjax/MathJax) | Display of mathematical notation in lessons, hints and assessments | Rendering does not establish mathematical correctness; configure supported inputs and accessible output |
+
+For equations, retain source notation, rendered view and exercise context. For handwritten work, retain the original image/strokes and mark machine recognition as a candidate transcription that can be corrected. An LLM explanation, a mathematical renderer and a verified calculation serve different roles.
+
+GeoGebra's source-code license does not make every installer, language asset or hosted service unrestricted free software. Keep it optional in a strictly free-software deployment until the selected packaging is qualified.
+
+### 5. Adaptive tutoring, mathematics models and training datasets
+
+| Project and source | Proposed role | Integration boundary |
+|---|---|---|
+| [OpenTutor](https://github.com/zijinz456/OpenTutor) | Local-first, block-based adaptive workspace connected to approved course materials | This is the project matching the supplied description, not other projects sharing the OpenTutor name; validate model configuration and evidence exchange |
+| [Llemma](https://github.com/EleutherAI/math-lm) | Optional mathematics-model research baseline and tutor component | Check model-weight, base-model, code and data terms separately; mathematical outputs require evaluation and tool-backed checks |
+| [SwallowCode](https://github.com/rioyokotalab/swallow-code-math) | Optional code-data research for domain adaptation | Dataset release and provenance must be pinned; the reviewed dataset terms reference the Llama 3.3 Community License and upstream data obligations |
+| [SwallowMath](https://github.com/rioyokotalab/swallow-code-math) | Optional mathematical-reasoning data research | Same separate dataset qualification; not automatically a permissively licensed course bank or a held-out benchmark |
+
+SwallowCode and SwallowMath are datasets, not inference engines. Their “openly licensed” description must not be interpreted as an OSI-approved software license or unrestricted redistribution. Llemma is not automatically instruction-tuned for classroom tutoring. Neither inclusion establishes improved learning outcomes.
+
+### 6. Programming, HPC and interactive assessment
+
+| Project and source | Proposed role | Integration boundary |
+|---|---|---|
+| [Artemis](https://github.com/ls1intum/Artemis) | Programming, quiz, modeling and other exercises with individual feedback | Preserve assessment ownership and rubric versions; qualify CI runners and supported LMS interfaces |
+| [Interactive OpenMP Programming](https://github.com/passlab/InteractiveOpenMPProgramming) / [author paper](https://arxiv.org/abs/2409.09296) | Interactive parallel-programming curriculum and reproducible laboratory scenarios | The work combines LLM-assisted authoring with human revision; it is a learning resource, not a general-purpose tutor or grading engine |
+
+An OpenMP lab should store compiler/runtime versions, input size, CPU allocation, thread count, schedule, correctness checks and timing methodology. Evaluate correctness before speedup. Execute learner and generated code in isolated, quota-limited workers without production credentials.
+
+### 7. SCORM integration and course migration
+
+| Project and source | Proposed role | Integration boundary |
+|---|---|---|
+| [React-scorm-provider (RSP)](https://github.com/S4-NetQuest/react-scorm-provider) | SCORM API communication inside a React learning activity | A wrapper for runtime calls, initially oriented to single-SCO/simple communication; not an LMS runtime, package builder or universal iframe player |
+| [moodle2edx](https://github.com/mitocw/moodle2edx) | Offline migration reference from Moodle backup to edX XML | Upstream explicitly marks it unsupported; quiz conversion is partial. Use an isolated migration experiment and report unsupported content |
+
+Migration must produce a mapping report: source IDs, destination IDs, missing assets, broken links, unsupported activities, quiz/rubric differences and manual corrections. Validate against the selected Open edX import version; do not imply transfer of enrollments, grades, attempts or certificates from content conversion alone.
+
+## AI and learning digital twins
+
+Extend the existing learner twin with evidence-backed competency estimates, source versions and uncertainty. It represents a learning history and a revisable skill model, not a definitive psychological profile.
+
+### AI service boundaries
+
+| Service | Input → output | Review/evaluation |
+|---|---|---|
+| Course RAG | Authorized, versioned resources → cited explanations | Retrieval permission filters; citation correctness; abstain when evidence is insufficient |
+| Adaptive tutor | Exercise, learner-selected goal and approved evidence → hints and next activity | Compare with an instructor-authored baseline; learner can correct the model |
+| Spatial reasoning assistant | Approved board region and context → diagram/explanation draft | Retain original strokes and region references; confirm transcription before grading |
+| Mathematics assistant | Expression/problem → candidate solution and check requests | Check with a suitable symbolic/numerical/formal tool when available; distinguish checked steps from generated prose |
+| Authoring assistant | Instructor brief and sources → lesson, quiz or slide draft | Editorial review and accessibility check before publishing |
+| Programming feedback | Submission plus deterministic test results → explanation | Tests/rubrics determine assessed behavior; AI suggestions cannot overwrite results |
+| Learning-path planner | Skill gaps and resource metadata → proposed route | Explain prerequisites, time assumptions and credential-source freshness |
+| Analytics assistant | Aggregated evidence → instructor summaries | Protect individual records; no automatic high-stakes learner decisions |
+
+A local-first model gateway should permit changing the inference runtime/model without changing the LMS. Record provider, model revision, prompt template, retrieval sources and evaluation configuration. Hosted inference is optional and must follow the deployment's data-sharing policy.
+
+### Bounded agent and MCP workflow
+
+Proposed tools include course-resource search, current-activity lookup, learner-authorized skill-gap retrieval, board-region reading, draft-hint generation and isolated lab launch. Each tool needs tenant/course scope and an explicit schema. These names describe proposed interfaces, not existing endpoints.
+
+AI may suggest a learning path, create a draft presentation or request a sandbox run. Publishing courses, changing enrollments, finalizing grades and issuing credentials belong to authorized application/instructor workflows. Treat retrieved documents, learner submissions and board content as untrusted data rather than instructions to the tool executor.
+
+Training on learner conversations, handwritten work or assessment submissions is disabled by default. A separate approved dataset process must address consent, rights, retention, de-identification and deletion propagation. Use held-out exercises to detect benchmark contamination and measure learning quality rather than only response fluency.
+
+### Canonical learning evidence
+
+| Entity | Minimum proposed fields |
+|---|---|
+| Course resource | Tenant, course ID, content version, source URI, license, locale, competency tags |
+| Activity | Tool ID, deployment/version, activity ID, launch policy, rubric reference |
+| Attempt | Pseudonymous learner reference, attempt ID, start/end, source tool, artifact references |
+| Evidence event | Event ID, schema version, producer, timestamp, attempt ID, evidence type, validation state |
+| Assessment | Rubric/version, score scale, grader type, supporting checks, review/correction history |
+| Lab run | Scenario/model revision, seed where relevant, runtime limits, telemetry and reproducibility manifest |
+| AI interaction | Model/prompt version, approved source references, generated artifact, review state |
+| Learner twin | Competency estimate, evidence references, uncertainty, update time and learner correction |
+| Credential mapping | Issuer, objective version, supporting evidence, verification timestamp and internal/external classification |
+
+An illustrative **internal** event, not an xAPI wire statement:
+
+```json
+{
+  "schema_version": "jfxlms.evidence.v1",
+  "event_id": "example-event-001",
+  "tenant_id": "demo-school",
+  "learner_ref": "pseudonymous-001",
+  "course_id": "parallel-programming",
+  "activity_id": "openmp-reduction",
+  "attempt_id": "example-attempt-003",
+  "source_tool": "qualified-lab-adapter",
+  "evidence_type": "correctness_test",
+  "result": {
+    "passed": 8,
+    "total": 10
+  },
+  "rubric_version": "example-v1",
+  "validation_state": "awaiting_review"
+}
+```
+
+Do not infer competence from attendance, page views or generated answers alone. Corrections must create a traceable revision and trigger recomputation of affected skill estimates. Internal badges and readiness indicators retain their own issuer and cannot confer external certifications.
+
+### Example end-to-end teaching scenario
+
+1. An instructor publishes a versioned OpenMP lesson built with eXeLearning, Adapt or ocp-reveal and registers it in the selected LMS.
+2. BigBlueButton hosts a discussion; optional OpenBoard/PenEcho artifacts are attached to the activity with access permissions.
+3. OpenTutor provides source-grounded hints. MathQuill captures relevant notation and MathJax renders it where needed.
+4. Artemis or a qualified lab adapter executes the learner's code in isolation and collects reproducible correctness/performance evidence.
+5. The evidence gateway validates the attempt and updates the learner twin; the instructor reviews any assessment requiring judgment.
+6. A path planner recommends a follow-up resource or an existing OpenTwin simulation lab and records why it is relevant.
+7. The existing certification layer can map verified skills to preparation objectives while preserving external issuer authority.
+
+This is a proposed integrated scenario, not a demonstration that these projects already expose compatible connectors.
+
+## Deployment, accessibility and ownership
+
+Use the existing JFXLMS infrastructure proposal with separate service groups for the LMS, identity, content, AI, evidence, media and sandbox workers. A compact pilot can use isolated services on a small deployment; distributed orchestration is an expansion option, not a prerequisite.
+
+Keep media transport/recording capacity separate from AI inference and learner code execution. Define storage limits, backup/restore procedures, tenant isolation, short-lived launch tokens and service-specific credentials. Offline-friendly course exports and queued evidence need deduplication and clear conflict handling on reconnection.
+
+Provide keyboard paths, screen-reader semantics, captions/transcripts where permitted, accessible equation representations and alternatives to handwriting-only interactions. Do not make camera use or AI participation mandatory for ordinary course access.
+
+### License and capability admission record
+
+For each dependency record:
+
+- Canonical source, selected release/commit, maintenance status and owner.
+- Code license, dependency licenses, optional commercial features and redistribution obligations.
+- Separate model-weight, dataset, course-content, image and recording rights.
+- Runtime/API/standard versions, supported deployment topology and required adapters.
+- Evidence of a successful launch, data round trip and learner export.
+- Accessibility findings, retention controls and known limitations.
+
+Candidates progress through **cataloged → qualified → adapter implemented → integration tested → pilot evaluated**. The compendium in this change remains at the catalog/proposal stage.
+
+## Delivery roadmap and acceptance
+
+| Phase | Concrete scope | Acceptance evidence |
+|---|---|---|
+| 1. Core LMS pilot | Select one backend; identity mapping; one course and learner journey | Enrollment/role tests, grade persistence, learner export and restore check |
+| 2. Content and classroom | One authoring path and BigBlueButton or OpenVidu integration | Published artifact replay, authorized joins, recording-access controls |
+| 3. Mathematics and tutoring | Math input/display plus approved-source RAG/OpenTutor adapter | Accessible equation workflow, citation accuracy and unsupported-answer handling |
+| 4. Assessment and OpenTwin | One Artemis/programming or simulation activity | Reproducible attempt, isolated execution and validated evidence round trip |
+| 5. Adaptive learner twin | Skill estimates and explainable recommendations | Instructor-reviewed mappings, correction propagation, comparison with baseline |
+| 6. Optional federation and research | Alternative LMS adapter, migration pilot, Llemma or dataset study | Capability matrix, migration loss report and held-out evaluation |
+
+Quality gates should cover tenant separation, idempotent events, stale course versions, unauthorized content retrieval, failed tool launches, score/resume behavior for the chosen SCORM profile, grade-passback authorization when enabled, and recovery after interrupted sessions.
+
+Evaluate tutoring with rubric-based accuracy, grounded citations, hint usefulness, latency and instructor review. Compare learning outcomes with a defined baseline and suitable study design before claiming improvement. No integration, model training, performance benchmark or classroom trial has been run by this documentation update.
+
+## Relationship to the existing certification proposal
+
+This expansion supplies the open learning, authoring, collaboration and AI integration plane for the certification architecture retained below. Reuse its skill graph, simulation evidence adapter and provider-boundary model.
+
+The earlier credential codes, course availability and dates are retained as existing planning material, **not revalidated by this compendium update**. Resolve current provider status before presenting a route as active. Likewise, previously illustrated directories, API routes, MCP tools and schemas remain proposed until backed by implemented and tested code.
+
+---
+
 # Microsoft Certification, LinkedIn Learning & NPTEL Simulation Integration Architecture
 
 ## OpenTwin AI Learning Management, Engineering & Professional Certification Platform
