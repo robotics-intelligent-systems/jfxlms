@@ -20,7 +20,7 @@ An open-source-first architecture for adaptive learning, collaborative classroom
 
 **Status:** proposed architecture and dependency catalog; no new integrations are implemented by this documentation change. Source review: 2026-09-20. Native API, LTI, SCORM, identity and event support must be verified for each selected release. Listing a project does not establish interoperability, production readiness or a common license.
 
-**Documentation:** [Document index](docs/README.md) · [NPTEL scientific computing, AI and simulation foundations / guía en español](docs/nptel-fundamentos-simulacion.md)
+**Documentation:** [Document index](docs/README.md) · [NPTEL scientific computing, AI and simulation foundations](docs/nptel-fundamentos-simulacion.md)
 
 **Navigation:** [Integration architecture](#integration-architecture) · [Categorized compendium](#categorized-compendium) · [AI and digital twins](#ai-and-learning-digital-twins) · [Delivery roadmap](#delivery-roadmap-and-acceptance) · [Existing certification architecture](#microsoft-certification-linkedin-learning--nptel-simulation-integration-architecture)
 
