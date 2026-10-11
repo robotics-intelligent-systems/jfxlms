@@ -1,106 +1,88 @@
-# NPTEL: fundamentos para computación científica, IA y simulación
+# NPTEL foundations for scientific computing, AI and simulation
 
-[Índice documental](README.md) · [Arquitectura JFXLMS](../README.md) · [TXT fuente](NPTEL%20National%20Programme.txt)
+[Documentation index](README.md) · [JFXLMS architecture](../README.md)
 
-Fecha de consolidación: 2026-10-11. Fuente: `NPTEL National Programme.txt`, blob `7da521df2a2030c87fc75f8512830c31d4d3605c`. El TXT se conserva íntegro como antecedente. Esta guía traduce los títulos y organiza su contenido; no es un catálogo exhaustivo ni confirma matrículas, certificados, docentes, instituciones o temarios de una edición vigente.
+Consolidation date: 2026-10-11. Provenance: the former `NPTEL National Programme.txt`, blob `7da521df2a2030c87fc75f8512830c31d4d3605c`, retained in Git history. This English guide replaces the TXT in the current documentation. It organizes the source material; it is not an exhaustive catalog and does not confirm enrollment, certificates, instructors, institutions or syllabi for a current course session.
 
-## Índice
+## Contents
 
-- [Computación científica](#computacion-cientifica)
-- [Inteligencia artificial y ciencia de datos](#inteligencia-artificial-y-ciencia-de-datos)
-- [Ingeniería de simulación](#ingenieria-de-simulacion)
-- [Consolidación con JFXLMS](#consolidacion-con-jfxlms)
-- [Registro e indexación propuestos](#registro-e-indexacion-propuestos)
-- [Referencias oficiales](#referencias-oficiales)
-- [English consolidated summary](#english-consolidated-summary)
+- [Scientific computing](#scientific-computing)
+- [Artificial intelligence and data science](#artificial-intelligence-and-data-science)
+- [Simulation engineering](#simulation-engineering)
+- [Consolidation with JFXLMS](#consolidation-with-jfxlms)
+- [Proposed registry and indexing](#proposed-registry-and-indexing)
+- [Official references](#official-references)
 
-<a id="computacion-cientifica"></a>
-## Computación científica
+## Scientific computing
 
-El TXT agrupa modelos matemáticos, análisis numérico y programación de alto rendimiento (HPC).
+The source groups mathematical models, numerical analysis and high-performance computing (HPC).
 
-| ID documental | Traducción al español | Nombre original / términos de búsqueda | Contenido descrito en el TXT |
-| --- | --- | --- | --- |
-| NPTEL-SC-01 | Computación científica / computación de alto rendimiento | Scientific Computing / High-Performance Computing | Métodos numéricos avanzados, álgebra lineal computacional, ecuaciones diferenciales ordinarias y parciales (ODE/PDE), paralelización con MPI, OpenMP y CUDA |
-| NPTEL-SC-02 | Métodos numéricos para ingenieros y científicos | Numerical Methods for Engineers & Scientists | Optimización, diferencias finitas, elementos finitos (FEM) y ajuste de curvas |
-| NPTEL-SC-03 | Computación paralela | Parallel Computing | Programación distribuida, arquitectura de procesadores y algoritmos científicos en arquitecturas masivamente paralelas |
-
-Herramientas mencionadas: C/C++, Fortran, Python, MPI, OpenMP y CUDA. Son referencias del texto, no dependencias instaladas ni herramientas garantizadas de todos los cursos. Las atribuciones del TXT a IIT Madras/IIT Kharagpur para SC-01 requieren vincularse a una ficha oficial concreta antes de publicarse como metadatos de un curso.
-
-<a id="inteligencia-artificial-y-ciencia-de-datos"></a>
-## Inteligencia artificial y ciencia de datos
-
-El TXT presenta fundamentos conceptuales, aprendizaje profundo y aprendizaje por refuerzo.
-
-| ID documental | Traducción al español | Nombre original / términos de búsqueda | Contenido descrito en el TXT |
-| --- | --- | --- | --- |
-| NPTEL-AI-01 | Inteligencia artificial: métodos de búsqueda y fundamentos | Artificial Intelligence: Search Methods / Foundations | Búsqueda A*, Minimax, representación del conocimiento, redes bayesianas y satisfacción de restricciones |
-| NPTEL-AI-02 | Aprendizaje profundo | Deep Learning | Redes convolucionales (CNN), recurrentes (RNN/LSTM), Transformers, optimizadores Adam/SGD y PyTorch/TensorFlow |
-| NPTEL-AI-03 | Aprendizaje por refuerzo | Reinforcement Learning | Procesos de decisión de Markov (MDP), Q-Learning, redes Q profundas (DQN) y gradientes de política |
-| NPTEL-AI-04 | IA aplicada y visión por computador | Applied AI & Computer Vision | Procesamiento del lenguaje natural (NLP), visión avanzada y aplicaciones a finanzas y salud |
-
-Herramientas mencionadas: Python, PyTorch, TensorFlow y Scikit-Learn. El TXT atribuye AI-01 a IIT Delhi/IIT Madras, AI-02 a IIT Ropar/IIT Madras y AI-03 a IIT Madras. Estas atribuciones se conservan como afirmaciones de la fuente pendientes de correspondencia con cada edición; AI-04 agrupa temas y no identifica un curso único.
-
-<a id="ingenieria-de-simulacion"></a>
-## Ingeniería de simulación
-
-El TXT reúne modelado físico, dinámica de fluidos computacional y sistemas complejos.
-
-| ID documental | Traducción al español | Nombre original / términos de búsqueda | Contenido descrito en el TXT |
-| --- | --- | --- | --- |
-| NPTEL-SE-01 | Dinámica de fluidos computacional | Computational Fluid Dynamics (CFD) | Discretización de Navier–Stokes, volumen finito (FVM), SIMPLE/PISO y turbulencia |
-| NPTEL-SE-02 | Método de elementos finitos en ingeniería | Finite Element Method (FEM) in Engineering | Análisis estructural, multifísica, transferencia de calor y elementos lineales/no lineales |
-| NPTEL-SE-03 | Modelado matemático y simulación de procesos químicos y mecánicos | Mathematical Modelling and Simulation of Chemical/Mechanical Processes | Procesos dinámicos, métodos estocásticos, Monte Carlo y gemelos digitales industriales |
-
-Herramientas mencionadas: OpenFOAM, ANSYS/COMSOL, MATLAB y Python. La atribución SE-01 a IIT Kanpur/IIT Kharagpur procede del TXT; no establece que todas las herramientas o técnicas enumeradas pertenezcan a una misma edición.
-
-<a id="consolidacion-con-jfxlms"></a>
-## Consolidación con JFXLMS
-
-Este documento amplía el componente de fundamentos académicos del README. No sustituye el registro NPTEL existente ni duplica las rutas de certificación Microsoft, nube, arquitectura de software o finanzas.
-
-| Área | Uso educativo propuesto | Evidencia propuesta de laboratorio OpenTwin |
+| Documentation ID | Topic / original search terms | Content described in the source |
 | --- | --- | --- |
-| Computación científica | Fundamentos de cálculo numérico y ejecución reproducible | Comparación con solución analítica, error/convergencia, parámetros y tiempos medidos |
-| IA y ciencia de datos | Fundamentos para tutoría, evaluación y modelos de aprendizaje | Datos sintéticos o autorizados, particiones reproducibles, métricas y revisión docente |
-| Ingeniería de simulación | Fundamentos de modelos físicos y acoplamiento | Unidades, condiciones iniciales/de frontera, versión del solver y referencia independiente |
+| NPTEL-SC-01 | Scientific Computing / High-Performance Computing | Advanced numerical methods, computational linear algebra, ordinary and partial differential equations (ODE/PDE), parallelization with MPI, OpenMP and CUDA |
+| NPTEL-SC-02 | Numerical Methods for Engineers & Scientists | Optimization, finite differences, finite elements (FEM) and curve fitting |
+| NPTEL-SC-03 | Parallel Computing | Distributed programming, processor architecture and scientific algorithms on massively parallel architectures |
 
-Las evidencias anteriores son propuestas editoriales de JFXLMS, no entregables oficiales de NPTEL. La inscripción y los certificados permanecen en los sistemas del proveedor. Un certificado NPTEL no equivale a una certificación Microsoft. Los laboratorios y adaptadores aquí relacionados no están implementados por este cambio documental.
+Referenced tools: C/C++, Fortran, Python, MPI, OpenMP and CUDA. These are source references, not installed dependencies or guaranteed tools for every course. The source attributes SC-01 to IIT Madras/IIT Kharagpur; these claims require a specific official course-page match before publication as course metadata.
 
-<a id="registro-e-indexacion-propuestos"></a>
-## Registro e indexación propuestos
+## Artificial intelligence and data science
 
-Los diez IDs de las tablas son claves de temas en esta documentación, no códigos oficiales NPTEL. Cada fila constituye una entrada única; la búsqueda admite tanto el título traducido como el nombre original y sus siglas.
+The source presents conceptual foundations, deep learning and reinforcement learning.
 
-Antes de incorporar un curso real al registro de recursos del README, completar:
+| Documentation ID | Topic / original search terms | Content described in the source |
+| --- | --- | --- |
+| NPTEL-AI-01 | Artificial Intelligence: Search Methods / Foundations | A* search, Minimax, knowledge representation, Bayesian networks and constraint satisfaction |
+| NPTEL-AI-02 | Deep Learning | Convolutional neural networks (CNN), recurrent networks (RNN/LSTM), Transformers, Adam/SGD optimizers and PyTorch/TensorFlow |
+| NPTEL-AI-03 | Reinforcement Learning | Markov decision processes (MDP), Q-Learning, Deep Q-Networks (DQN) and policy gradients |
+| NPTEL-AI-04 | Applied AI & Computer Vision | Natural language processing (NLP), advanced computer vision and applications in finance and healthcare |
 
-- ID interno del recurso y URL oficial del curso.
-- Título original, traducción editorial e idioma del material.
-- Institución, docente, edición/sesión y fecha de consulta.
-- Prerrequisitos y objetivos tomados de la ficha oficial.
-- Condiciones de acceso, reutilización y certificación de esa edición.
-- Competencias relacionadas, laboratorio propuesto y procedencia de la evidencia.
+Referenced tools: Python, PyTorch, TensorFlow and Scikit-Learn. The source attributes AI-01 to IIT Delhi/IIT Madras, AI-02 to IIT Ropar/IIT Madras and AI-03 to IIT Madras. These remain source claims pending qualification against individual sessions; AI-04 groups topics rather than identifying a single course.
 
-Esta indexación es documental: no implica que exista un índice RAG, motor de búsqueda, descarga de cursos o sincronización con NPTEL. No redistribuir material docente sin comprobar sus condiciones de reutilización.
+## Simulation engineering
 
-<a id="referencias-oficiales"></a>
-## Referencias oficiales
+The source brings together physical modeling, computational fluid dynamics and complex systems.
 
-Consultadas el 2026-10-11 para localizar ejemplos; las sesiones indicadas pueden estar archivadas y no prueban disponibilidad actual de matrícula. No se tratan como equivalencias exactas de todos los títulos del TXT.
+| Documentation ID | Topic / original search terms | Content described in the source |
+| --- | --- | --- |
+| NPTEL-SE-01 | Computational Fluid Dynamics (CFD) | Navier–Stokes discretization, finite volume methods (FVM), SIMPLE/PISO algorithms and turbulence modeling |
+| NPTEL-SE-02 | Finite Element Method (FEM) in Engineering | Structural analysis, multiphysics, heat transfer and linear/nonlinear elements |
+| NPTEL-SE-03 | Mathematical Modelling and Simulation of Chemical/Mechanical Processes | Dynamic processes, stochastic methods, Monte Carlo simulation and industrial digital twins |
 
-- [Catálogo oficial NPTEL](https://nptel.ac.in/courses): localizar la ficha y sesión de cada curso.
-- [High Performance Scientific Computing, sesión noc25_ma27](https://onlinecourses.nptel.ac.in/e-learning/preview/noc25_ma27): ejemplo oficial relacionado con SC-01.
-- [Scientific Computing Using Python, sesión noc23_ph46](https://onlinecourses.nptel.ac.in/noc23_ph46/preview): ejemplo relacionado con computación científica.
-- [Applied Computational Fluid Dynamics, ficha 101104450](https://nptel.ac.in/courses/101104450): ejemplo relacionado con SE-01.
-- [Computational Fluid Dynamics, ficha 112105045](https://nptel.ac.in/courses/112105045): referencia adicional para SE-01.
+Referenced tools: OpenFOAM, ANSYS/COMSOL, MATLAB and Python. The source attributes SE-01 to IIT Kanpur/IIT Kharagpur; this does not establish that all listed tools or techniques belong to one session.
 
-<a id="english-consolidated-summary"></a>
-## English consolidated summary
+## Consolidation with JFXLMS
 
-The source TXT is already mostly Spanish. This companion organizes it into ten topic records and translates its English headings while retaining searchable original titles. The records cover scientific/high-performance computing, numerical methods, parallel computing, AI search and foundations, deep learning, reinforcement learning, applied AI/computer vision, CFD, FEM and chemical/mechanical process simulation.
+This guide extends the academic-foundations component of the main README. It complements the existing NPTEL registry and does not duplicate the Microsoft certification, cloud, software architecture or finance pathways.
 
-The source describes numerical linear algebra, ODE/PDE methods, optimization, finite differences/elements, curve fitting and distributed algorithms; AI search, knowledge representation, Bayesian networks, constraints, CNN/RNN/LSTM/Transformers, Adam/SGD, MDPs, Q-learning, DQN and policy gradients; and Navier–Stokes discretization, finite volumes, SIMPLE/PISO, turbulence, structural/thermal/multiphysics analysis, stochastic methods, Monte Carlo and industrial digital twins.
+| Area | Proposed educational use | Proposed OpenTwin laboratory evidence |
+| --- | --- | --- |
+| Scientific computing | Numerical methods and reproducible execution | Analytic comparison, error/convergence, parameters and measured execution times |
+| AI and data science | Foundations for tutoring, assessment and learning models | Synthetic or authorized datasets, reproducible splits, metrics and instructor review |
+| Simulation engineering | Physical models and system coupling | Units, initial/boundary conditions, solver version and independent reference |
 
-Its tool lists include C/C++, Fortran, Python, MPI, OpenMP, CUDA, PyTorch, TensorFlow, Scikit-Learn, OpenFOAM, ANSYS/COMSOL and MATLAB. They are source references, not installed JFXLMS dependencies or guaranteed course syllabi. Institution and session assignments require qualification against a specific official course page.
+These evidence proposals are JFXLMS editorial additions, not official NPTEL deliverables. Enrollment and certificates remain in provider systems. An NPTEL certificate is not a Microsoft Certification. This documentation change does not implement the related laboratories or adapters.
 
-For JFXLMS, these topics complement the existing NPTEL registry and professional-pathway architecture. Proposed OpenTwin lab evidence includes analytic comparisons and convergence, reproducible data splits and metrics, units, boundary conditions, solver versions and independent references. Provider certificates, enrollment and current sessions remain external. This documentation implements no course adapter, RAG index, simulation or credential issuance.
+## Proposed registry and indexing
+
+The ten table IDs are internal documentation topic keys, not official NPTEL course codes. Each row is a unique topic entry; its original title and acronyms support lookup.
+
+Before adding a real course to the learning-resource registry described in the README, record:
+
+- Internal resource ID and official course URL.
+- Original title, any editorial translation and material language.
+- Institution, instructor, session and verification date.
+- Prerequisites and objectives from the official course page.
+- Session-specific access, reuse and certification conditions.
+- Related competencies, proposed laboratory and evidence provenance.
+
+This is documentation indexing. It does not implement a RAG index, search engine, course download or NPTEL synchronization. Check reuse conditions before redistributing teaching material.
+
+## Official references
+
+Consulted on 2026-10-11 to locate examples. Listed sessions may be archived and do not establish current enrollment availability. They are not exact equivalents of every title in the source.
+
+- [Official NPTEL catalog](https://nptel.ac.in/courses): locate the course page and session for each resource.
+- [High Performance Scientific Computing, session noc25_ma27](https://onlinecourses.nptel.ac.in/e-learning/preview/noc25_ma27): an official example related to SC-01.
+- [Scientific Computing Using Python, session noc23_ph46](https://onlinecourses.nptel.ac.in/noc23_ph46/preview): an example related to scientific computing.
+- [Applied Computational Fluid Dynamics, course 101104450](https://nptel.ac.in/courses/101104450): an example related to SE-01.
+- [Computational Fluid Dynamics, course 112105045](https://nptel.ac.in/courses/112105045): an additional reference for SE-01.
