@@ -22,7 +22,7 @@ An open-source-first architecture for adaptive learning, collaborative classroom
 
 **Documentation:** [Document index](docs/README.md) · [NPTEL scientific computing, AI and simulation foundations](docs/nptel-fundamentos-simulacion.md)
 
-**Navigation:** [Integration architecture](#integration-architecture) · [Categorized compendium](#categorized-compendium) · [AI and digital twins](#ai-and-learning-digital-twins) · [Delivery roadmap](#delivery-roadmap-and-acceptance) · [Existing certification architecture](#microsoft-certification-linkedin-learning--nptel-simulation-integration-architecture)
+**Navigation:** [Integration architecture](#integration-architecture) · [Project dependency: jfxjts](#internal-project-dependency-jfxjts) · [Categorized compendium](#categorized-compendium) · [AI and digital twins](#ai-and-learning-digital-twins) · [Delivery roadmap](#delivery-roadmap-and-acceptance) · [Existing certification architecture](#microsoft-certification-linkedin-learning--nptel-simulation-integration-architecture)
 
 ## Integration architecture
 
@@ -76,6 +76,35 @@ Keep application databases separate. Exchange stable identifiers and versioned A
 [LTI 1.3 specification](https://www.imsglobal.org/spec/lti/v1p3/) and [xAPI specification repository](https://github.com/adlnet/xAPI-Spec) are reference sources for the selected adapters. Standards support is a per-product, per-version qualification item; this proposal does not claim universal conformance.
 
 The simplified xAPI-like JSON in the earlier certification section illustrates domain intent, not a conformant wire statement. The adapter must emit the complete required actor, verb and object structures and validate them against the selected xAPI version.
+
+## Internal project dependency: jfxjts
+
+[jfxjts — OpenTwin Flight](https://github.com/robotics-intelligent-systems/jfxjts)
+is a project dependency for the flight-training and mission-simulation labs
+served through the JFXLMS OpenTwin lab gateway.
+
+| Contribution | Proposed boundary with jfxlms |
+| --- | --- |
+| Reproducible flight/mission exercises | Map course activities and skill objectives to versioned scenario manifests and model configurations |
+| Instructor-led simulation | Launch and manage authorized sessions through a qualified lab adapter with explicit instructor authority |
+| Telemetry, events and replay | Attach run/scenario IDs, timestamps, model provenance and replay artifacts to learner evidence |
+| Debriefing and assessment | Return observations and draft assessment evidence for instructor review; accepted grades remain with the authoritative LMS |
+
+jfxlms owns learner identity, enrollment, course objectives, accepted grades
+and learning evidence. jfxjts owns the selected simulation lifecycle,
+clock and dynamics-authority contracts. LTI launch or xAPI evidence exchange
+requires a separately implemented and qualified adapter; native support in
+jfxjts is not assumed. Simulation completion is educational evidence and
+does not itself grant pilot accreditation or professional certification.
+
+**Dependency type:** internal engineering and reference-architecture dependency.
+Runtime adoption is selected per simulation profile. The declaration does not
+install the upstream compendium or establish a tested cross-project adapter.
+
+**Status:** declared; adapter implementation and integration validation pending.
+Each executable profile must pin the jfxjts commit/tag, verify code/model/asset
+licenses, record runtime requirements and interface/schema versions, and retain
+test evidence for units, coordinate frames, timestamps, lifecycle and replay.
 
 ## Categorized compendium
 
